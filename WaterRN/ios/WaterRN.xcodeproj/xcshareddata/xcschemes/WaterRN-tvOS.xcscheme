@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "WaterRN-tvOS.app"
-               BlueprintName = "WaterRN-tvOS"
-               ReferencedContainer = "container:WaterRN.xcodeproj">
+               BuildableName = "WaterRn-tvOS.app"
+               BlueprintName = "WaterRn-tvOS"
+               ReferencedContainer = "container:WaterRn.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "WaterRN-tvOSTests.xctest"
-               BlueprintName = "WaterRN-tvOSTests"
-               ReferencedContainer = "container:WaterRN.xcodeproj">
+               BuildableName = "WaterRn-tvOSTests.xctest"
+               BlueprintName = "WaterRn-tvOSTests"
+               ReferencedContainer = "container:WaterRn.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "WaterRN-tvOS.app"
-            BlueprintName = "WaterRN-tvOS"
-            ReferencedContainer = "container:WaterRN.xcodeproj">
+            BuildableName = "WaterRn-tvOS.app"
+            BlueprintName = "WaterRn-tvOS"
+            ReferencedContainer = "container:WaterRn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "WaterRN-tvOS.app"
-            BlueprintName = "WaterRN-tvOS"
-            ReferencedContainer = "container:WaterRN.xcodeproj">
+            BuildableName = "WaterRn-tvOS.app"
+            BlueprintName = "WaterRn-tvOS"
+            ReferencedContainer = "container:WaterRn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

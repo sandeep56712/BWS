@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* WaterRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterRNTests.m */; };
+		00E356F31AD99517003FC87E /* WaterRnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterRnTests.m */; };
+		0FA7BCE332A01496C579B8FF /* libPods-WaterRn-WaterRnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAF5553C7360FB3E7CBB7E0 /* libPods-WaterRn-WaterRnTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,11 +16,10 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* WaterRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterRNTests.m */; };
-		73D7F9548535E7DF60B35B68 /* libPods-WaterRN-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA04BB2706453A23A886D0CB /* libPods-WaterRN-tvOS.a */; };
-		9EF6D10D47E4F0EB7912264F /* libPods-WaterRN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1477B53735CAC4E6213C694D /* libPods-WaterRN-tvOSTests.a */; };
-		EE4120444247AE1E1DA16E54 /* libPods-WaterRN-WaterRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E847E2EFD44FB984AD544D4F /* libPods-WaterRN-WaterRNTests.a */; };
-		F4351201C2D60F95A8F7BC35 /* libPods-WaterRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8E85CD5436D7F30E26177B /* libPods-WaterRN.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* WaterRnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WaterRnTests.m */; };
+		32080B050617172C06524E5F /* libPods-WaterRn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B46FD17CC459326E024A7FC9 /* libPods-WaterRn-tvOSTests.a */; };
+		375CA1D030CA965A17647725 /* libPods-WaterRn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B97803634D236EF3F81958C /* libPods-WaterRn.a */; };
+		616AF27D2987703177E8B610 /* libPods-WaterRn-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABED2CD101A4B7AAB0923B8C /* libPods-WaterRn-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = WaterRN;
+			remoteInfo = WaterRn;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "WaterRN-tvOS";
+			remoteInfo = "WaterRn-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* WaterRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* WaterRnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterRnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* WaterRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterRNTests.m; sourceTree = "<group>"; };
-		01ABD763D59FD4653FBAA348 /* Pods-WaterRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRN-tvOSTests/Pods-WaterRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0A8E85CD5436D7F30E26177B /* libPods-WaterRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* WaterRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WaterRN/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WaterRN/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* WaterRnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterRnTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* WaterRn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterRn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WaterRn/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WaterRn/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WaterRN/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WaterRN/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WaterRN/main.m; sourceTree = "<group>"; };
-		1477B53735CAC4E6213C694D /* libPods-WaterRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16A3AE1E8F3953EAFAD3F3BB /* Pods-WaterRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRN-tvOSTests/Pods-WaterRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* WaterRN-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WaterRN-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* WaterRN-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WaterRN-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7063E7624DE2331FE42303 /* Pods-WaterRN-WaterRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-WaterRNTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRN-WaterRNTests/Pods-WaterRN-WaterRNTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B9FF24DB60826A92B3C2D19 /* Pods-WaterRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN.release.xcconfig"; path = "Target Support Files/Pods-WaterRN/Pods-WaterRN.release.xcconfig"; sourceTree = "<group>"; };
-		8334808D177B909AA8861ADA /* Pods-WaterRN-WaterRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-WaterRNTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRN-WaterRNTests/Pods-WaterRN-WaterRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E48D19B9020DB70CDC40253A /* Pods-WaterRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-tvOS.release.xcconfig"; path = "Target Support Files/Pods-WaterRN-tvOS/Pods-WaterRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		E847E2EFD44FB984AD544D4F /* libPods-WaterRN-WaterRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRN-WaterRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WaterRn/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WaterRn/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WaterRn/main.m; sourceTree = "<group>"; };
+		1B97803634D236EF3F81958C /* libPods-WaterRn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAF5553C7360FB3E7CBB7E0 /* libPods-WaterRn-WaterRnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRn-WaterRnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FF261D0227953E7DF190FE /* Pods-WaterRn-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOS.release.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOS/Pods-WaterRn-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* WaterRn-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WaterRn-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* WaterRn-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WaterRn-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8B0CDAB6ACB45A6AA42412 /* Pods-WaterRn-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOSTests/Pods-WaterRn-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AC5574FE8E546AD688B1114 /* Pods-WaterRn-WaterRnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-WaterRnTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRn-WaterRnTests/Pods-WaterRn-WaterRnTests.release.xcconfig"; sourceTree = "<group>"; };
+		6439530BD94B4EF80FD44F9C /* Pods-WaterRn-WaterRnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-WaterRnTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-WaterRnTests/Pods-WaterRn-WaterRnTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83217A6312B4582CD8382183 /* Pods-WaterRn-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOS/Pods-WaterRn-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8631ECADE7710A3674BEC322 /* Pods-WaterRn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn.release.xcconfig"; path = "Target Support Files/Pods-WaterRn/Pods-WaterRn.release.xcconfig"; sourceTree = "<group>"; };
+		99A9A8270BFB364A231CD91F /* Pods-WaterRn-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOSTests/Pods-WaterRn-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABED2CD101A4B7AAB0923B8C /* libPods-WaterRn-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRn-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46FD17CC459326E024A7FC9 /* libPods-WaterRn-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRn-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EF21A413150D08BCCF17BDE6 /* Pods-WaterRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN.debug.xcconfig"; path = "Target Support Files/Pods-WaterRN/Pods-WaterRN.debug.xcconfig"; sourceTree = "<group>"; };
-		F6F532B436DF5511A7BEDA7A /* Pods-WaterRN-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRN-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WaterRN-tvOS/Pods-WaterRN-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FA04BB2706453A23A886D0CB /* libPods-WaterRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1CA64D07F3AFE22956F0F7 /* Pods-WaterRn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn/Pods-WaterRn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE4120444247AE1E1DA16E54 /* libPods-WaterRN-WaterRNTests.a in Frameworks */,
+				0FA7BCE332A01496C579B8FF /* libPods-WaterRn-WaterRnTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4351201C2D60F95A8F7BC35 /* libPods-WaterRN.a in Frameworks */,
+				375CA1D030CA965A17647725 /* libPods-WaterRn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D7F9548535E7DF60B35B68 /* libPods-WaterRN-tvOS.a in Frameworks */,
+				616AF27D2987703177E8B610 /* libPods-WaterRn-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EF6D10D47E4F0EB7912264F /* libPods-WaterRN-tvOSTests.a in Frameworks */,
+				32080B050617172C06524E5F /* libPods-WaterRn-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* WaterRNTests */ = {
+		00E356EF1AD99517003FC87E /* WaterRnTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* WaterRNTests.m */,
+				00E356F21AD99517003FC87E /* WaterRnTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = WaterRNTests;
+			path = WaterRnTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* WaterRN */ = {
+		13B07FAE1A68108700A75B9A /* WaterRn */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +133,22 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = WaterRN;
+			name = WaterRn;
+			sourceTree = "<group>";
+		};
+		15562391B904BF6A1E015EAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1CA64D07F3AFE22956F0F7 /* Pods-WaterRn.debug.xcconfig */,
+				8631ECADE7710A3674BEC322 /* Pods-WaterRn.release.xcconfig */,
+				6439530BD94B4EF80FD44F9C /* Pods-WaterRn-WaterRnTests.debug.xcconfig */,
+				5AC5574FE8E546AD688B1114 /* Pods-WaterRn-WaterRnTests.release.xcconfig */,
+				83217A6312B4582CD8382183 /* Pods-WaterRn-tvOS.debug.xcconfig */,
+				21FF261D0227953E7DF190FE /* Pods-WaterRn-tvOS.release.xcconfig */,
+				99A9A8270BFB364A231CD91F /* Pods-WaterRn-tvOSTests.debug.xcconfig */,
+				4A8B0CDAB6ACB45A6AA42412 /* Pods-WaterRn-tvOSTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +156,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				0A8E85CD5436D7F30E26177B /* libPods-WaterRN.a */,
-				E847E2EFD44FB984AD544D4F /* libPods-WaterRN-WaterRNTests.a */,
-				FA04BB2706453A23A886D0CB /* libPods-WaterRN-tvOS.a */,
-				1477B53735CAC4E6213C694D /* libPods-WaterRN-tvOSTests.a */,
+				1B97803634D236EF3F81958C /* libPods-WaterRn.a */,
+				1FAF5553C7360FB3E7CBB7E0 /* libPods-WaterRn-WaterRnTests.a */,
+				ABED2CD101A4B7AAB0923B8C /* libPods-WaterRn-tvOS.a */,
+				B46FD17CC459326E024A7FC9 /* libPods-WaterRn-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,12 +174,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* WaterRN */,
+				13B07FAE1A68108700A75B9A /* WaterRn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* WaterRNTests */,
+				00E356EF1AD99517003FC87E /* WaterRnTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				FB3DB88D4822B82709305787 /* Pods */,
+				15562391B904BF6A1E015EAA /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -174,38 +189,22 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* WaterRN.app */,
-				00E356EE1AD99517003FC87E /* WaterRNTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* WaterRN-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* WaterRN-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* WaterRn.app */,
+				00E356EE1AD99517003FC87E /* WaterRnTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* WaterRn-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* WaterRn-tvOSTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FB3DB88D4822B82709305787 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EF21A413150D08BCCF17BDE6 /* Pods-WaterRN.debug.xcconfig */,
-				5B9FF24DB60826A92B3C2D19 /* Pods-WaterRN.release.xcconfig */,
-				8334808D177B909AA8861ADA /* Pods-WaterRN-WaterRNTests.debug.xcconfig */,
-				3D7063E7624DE2331FE42303 /* Pods-WaterRN-WaterRNTests.release.xcconfig */,
-				F6F532B436DF5511A7BEDA7A /* Pods-WaterRN-tvOS.debug.xcconfig */,
-				E48D19B9020DB70CDC40253A /* Pods-WaterRN-tvOS.release.xcconfig */,
-				01ABD763D59FD4653FBAA348 /* Pods-WaterRN-tvOSTests.debug.xcconfig */,
-				16A3AE1E8F3953EAFAD3F3BB /* Pods-WaterRN-tvOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* WaterRNTests */ = {
+		00E356ED1AD99517003FC87E /* WaterRnTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WaterRNTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WaterRnTests" */;
 			buildPhases = (
-				F4FE1CB2EF73549518CC007C /* [CP] Check Pods Manifest.lock */,
+				8F9B6CC790F0EBAD856D699B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -215,16 +214,16 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = WaterRNTests;
-			productName = WaterRNTests;
-			productReference = 00E356EE1AD99517003FC87E /* WaterRNTests.xctest */;
+			name = WaterRnTests;
+			productName = WaterRnTests;
+			productReference = 00E356EE1AD99517003FC87E /* WaterRnTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* WaterRN */ = {
+		13B07F861A680F5B00A75B9A /* WaterRn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WaterRN" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WaterRn" */;
 			buildPhases = (
-				9B4B591D0560A79488F466B9 /* [CP] Check Pods Manifest.lock */,
+				25FB911FB2D7256149A44EC3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -235,16 +234,16 @@
 			);
 			dependencies = (
 			);
-			name = WaterRN;
-			productName = WaterRN;
-			productReference = 13B07F961A680F5B00A75B9A /* WaterRN.app */;
+			name = WaterRn;
+			productName = WaterRn;
+			productReference = 13B07F961A680F5B00A75B9A /* WaterRn.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* WaterRN-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* WaterRn-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRN-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRn-tvOS" */;
 			buildPhases = (
-				7B9FE36EB7DE0626198B0D98 /* [CP] Check Pods Manifest.lock */,
+				284CF0D752D51729346E1B3C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -255,16 +254,16 @@
 			);
 			dependencies = (
 			);
-			name = "WaterRN-tvOS";
-			productName = "WaterRN-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* WaterRN-tvOS.app */;
+			name = "WaterRn-tvOS";
+			productName = "WaterRn-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* WaterRn-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* WaterRN-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* WaterRn-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRN-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRn-tvOSTests" */;
 			buildPhases = (
-				5B0E633070033D327F970BDC /* [CP] Check Pods Manifest.lock */,
+				A9C2C9F68A59B38F3D66BE8A /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -274,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "WaterRN-tvOSTests";
-			productName = "WaterRN-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* WaterRN-tvOSTests.xctest */;
+			name = "WaterRn-tvOSTests";
+			productName = "WaterRn-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* WaterRn-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -292,6 +291,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = JQQYCG5NGP;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -305,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WaterRN" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WaterRn" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,10 +318,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* WaterRN */,
-				00E356ED1AD99517003FC87E /* WaterRNTests */,
-				2D02E47A1E0B4A5D006451C7 /* WaterRN-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* WaterRN-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* WaterRn */,
+				00E356ED1AD99517003FC87E /* WaterRnTests */,
+				2D02E47A1E0B4A5D006451C7 /* WaterRn-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* WaterRn-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +375,50 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		25FB911FB2D7256149A44EC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterRn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		284CF0D752D51729346E1B3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterRn-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,7 +433,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		5B0E633070033D327F970BDC /* [CP] Check Pods Manifest.lock */ = {
+		8F9B6CC790F0EBAD856D699B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,14 +448,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WaterRN-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WaterRn-WaterRnTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B9FE36EB7DE0626198B0D98 /* [CP] Check Pods Manifest.lock */ = {
+		A9C2C9F68A59B38F3D66BE8A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,51 +470,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WaterRN-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B4B591D0560A79488F466B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WaterRN-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4FE1CB2EF73549518CC007C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WaterRN-WaterRNTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WaterRn-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,7 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* WaterRNTests.m in Sources */,
+				00E356F31AD99517003FC87E /* WaterRnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* WaterRNTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* WaterRnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,12 +557,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* WaterRN */;
+			target = 13B07F861A680F5B00A75B9A /* WaterRn */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* WaterRN-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* WaterRn-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -574,7 +574,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = WaterRN;
+			path = WaterRn;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -582,14 +582,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8334808D177B909AA8861ADA /* Pods-WaterRN-WaterRNTests.debug.xcconfig */;
+			baseConfigurationReference = 6439530BD94B4EF80FD44F9C /* Pods-WaterRn-WaterRnTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = WaterRNTests/Info.plist;
+				INFOPLIST_FILE = WaterRnTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -599,17 +599,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRN.app/WaterRN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRn.app/WaterRn";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D7063E7624DE2331FE42303 /* Pods-WaterRN-WaterRNTests.release.xcconfig */;
+			baseConfigurationReference = 5AC5574FE8E546AD688B1114 /* Pods-WaterRn-WaterRnTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = WaterRNTests/Info.plist;
+				INFOPLIST_FILE = WaterRnTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -619,31 +619,33 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRN.app/WaterRN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRn.app/WaterRn";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF21A413150D08BCCF17BDE6 /* Pods-WaterRN.debug.xcconfig */;
+			baseConfigurationReference = FC1CA64D07F3AFE22956F0F7 /* Pods-WaterRn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JQQYCG5NGP;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = WaterRN/Info.plist;
+				INFOPLIST_FILE = WaterRn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = WaterRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wv.psuh;
+				PRODUCT_NAME = WaterRn;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -652,20 +654,22 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9FF24DB60826A92B3C2D19 /* Pods-WaterRN.release.xcconfig */;
+			baseConfigurationReference = 8631ECADE7710A3674BEC322 /* Pods-WaterRn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = WaterRN/Info.plist;
+				DEVELOPMENT_TEAM = JQQYCG5NGP;
+				INFOPLIST_FILE = WaterRn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = WaterRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wv.psuh;
+				PRODUCT_NAME = WaterRn;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -673,7 +677,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6F532B436DF5511A7BEDA7A /* Pods-WaterRN-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 83217A6312B4582CD8382183 /* Pods-WaterRn-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -684,14 +688,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "WaterRN-tvOS/Info.plist";
+				INFOPLIST_FILE = "WaterRn-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRN-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRn-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -701,7 +705,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E48D19B9020DB70CDC40253A /* Pods-WaterRN-tvOS.release.xcconfig */;
+			baseConfigurationReference = 21FF261D0227953E7DF190FE /* Pods-WaterRn-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -712,14 +716,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "WaterRN-tvOS/Info.plist";
+				INFOPLIST_FILE = "WaterRn-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRN-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRn-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -729,7 +733,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01ABD763D59FD4653FBAA348 /* Pods-WaterRN-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 99A9A8270BFB364A231CD91F /* Pods-WaterRn-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -739,24 +743,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "WaterRN-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "WaterRn-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRN-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRn-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRN-tvOS.app/WaterRN-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRn-tvOS.app/WaterRn-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16A3AE1E8F3953EAFAD3F3BB /* Pods-WaterRN-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 4A8B0CDAB6ACB45A6AA42412 /* Pods-WaterRn-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -766,17 +770,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "WaterRN-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "WaterRn-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRN-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.WaterRn-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRN-tvOS.app/WaterRN-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterRn-tvOS.app/WaterRn-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -897,7 +901,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WaterRNTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "WaterRnTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -906,7 +910,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WaterRN" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "WaterRn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -915,7 +919,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRN-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRn-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -924,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRN-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "WaterRn-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -933,7 +937,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WaterRN" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "WaterRn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

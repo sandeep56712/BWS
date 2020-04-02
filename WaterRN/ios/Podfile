@@ -21,8 +21,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'WaterRN' do
-  # Pods for WaterRN
+target 'WaterRn' do
+  # Pods for WaterRn
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -54,7 +54,7 @@ target 'WaterRN' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'WaterRNTests' do
+  target 'WaterRnTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -71,10 +71,10 @@ target 'WaterRN' do
   end
 end
 
-target 'WaterRN-tvOS' do
-  # Pods for WaterRN-tvOS
+target 'WaterRn-tvOS' do
+  # Pods for WaterRn-tvOS
 
-  target 'WaterRN-tvOSTests' do
+  target 'WaterRn-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
