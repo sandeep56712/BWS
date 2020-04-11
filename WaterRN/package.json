@@ -16,6 +16,7 @@
     "react": "16.11.0",
     "react-native": "0.62.0",
     "react-native-gesture-handler": "^1.5.3",
+    "react-native-responsive-screen": "^1.4.1",
     "react-native-screens": "^2.4.0",
     "react-native-swiper": "^1.5.14",
     "react-native-switch-selector": "^2.0.3",

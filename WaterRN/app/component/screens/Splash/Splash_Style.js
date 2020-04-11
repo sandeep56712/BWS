@@ -6,13 +6,13 @@ export default {
    // backgroundColor:'transparent',
     justifyContent: 'center',
     alignItems: 'center',
-	 
+   
   },
   imageView:{
-  	width:undefined,
-		height:undefined,
-		flex: 1,
-		margin:10,
-		resizeMode:'contain'
+    width:undefined,
+    height:undefined,
+    flex: 1,
+    margin:10,
+    resizeMode:'contain'
   }
 };

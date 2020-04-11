@@ -1,50 +1,61 @@
-import React from 'react'
+import React, { Component } from "react";
+
 import {
+  Platform,
+  StyleSheet,
   Text,
-  View
-} from 'react-native'
-import Swiper from 'react-native-swiper'
+  Image,
+  View,
+  TouchableOpacity,
+  StatusBar,
+} from "react-native";
+import styles from "./Splash_Style";
+import { NavigationActions, StackActions } from "react-navigation";
+import AsyncStorage from "@react-native-community/async-storage";
 
-var styles = {
-  wrapper: {
+export default class Splash extends Component {
+  componentWillMount() {
+    console.ignoredYellowBox = ["Warning: Each", "Warning: Failed"];
+    // StatusBar.setHidden(true);
+    //DO SOMETHING
+    this.interval = setTimeout(() => {
+      AsyncStorage.getItem("user").then((result) => {
+        if (result != undefined) {
+          var jsonstr = JSON.parse(result);
+          console.log(
+            "AsyncStorage loggedInStatus===========" + jsonstr.loggedInStatus
+          );
+          //  isLoggedIn:jsonstr.loggedInStatus,
 
-  },
-  slide1: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#9DD6EB',
-  },
-  slide2: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#97CAE5'
-  },
-  slide3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#92BBD9'
-  },
-  text: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold'
+          if (jsonstr.loggedInStatus == true) {
+            //this.props.navigation.navigate('Home');
+            this.navigateTo("Home");
+          } else {
+            //this.props.navigation.navigate('Login');
+            this.navigateTo("Login");
+          }
+        } else {
+          this.navigateTo("Login");
+        }
+        console.log("get storage value -- " + jsonstr);
+      });
+    }, 2000);
+  }
+  navigateTo = (routeName: string) => {
+    const resetAction = StackActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName })],
+    });
+    this.props.navigation.dispatch(resetAction);
+  };
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <Image
+          style={styles.imageView}
+          source={require("../../Image/logo.png")}
+        />
+      </View>
+    );
   }
 }
-
-export default () =>
-<View style = {{marginBottom:70,flex:1}}>
- <Swiper style={styles.wrapper} >
-  <View style={styles.slide1}>
-    <Text style={styles.text}>Hello Swiper</Text>
-  </View>
-  <View style={styles.slide2}>
-    <Text style={styles.text}>Beautiful</Text>
-  </View>
-  <View style={styles.slide3}>
-    <Text style={styles.text}>And simple</Text>
-  </View>
-</Swiper>
-</View>

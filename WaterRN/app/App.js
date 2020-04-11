@@ -29,6 +29,7 @@ import ForgotPassword from './component/screens/ForgotPassword/ForgotPassword'
 import Register from './component/screens/Register/Register'
 import OtpVerification from './component/screens/OtpVerification/OtpVerification'
 import Home from './component/screens/Home/Home'
+import ProductDetails from './component/screens/ProductDetails/ProductDetails'
 
 // Side menu
 
@@ -70,13 +71,16 @@ const AppStackAllScreen = createStackNavigator(
     },
     Home: {
       screen: drawerNavigators
+    }, 
+    ProductDetails: {
+      screen: ProductDetails
     },
     
 },
   {
     headerMode: "none",
     mode: "modal",
-    initialRouteName: "Login", //Splash
+    initialRouteName: "Splash", //Splash
     defaultNavigationOptions: {
       gesturesEnabled: false
     }
