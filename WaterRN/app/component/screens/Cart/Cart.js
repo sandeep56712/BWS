@@ -18,7 +18,7 @@ export default class Cart extends Component {
     return (
       <View style={{ flex: 1, }}>
          <View style={styles.header}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
              <Image 
                   style={styles.imageback}
                   source={require("../../Image/arrow_back.png")}

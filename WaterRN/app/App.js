@@ -17,79 +17,19 @@ import {
   
 } from "react-native";
 
-import { createStackNavigator, createAppContainer,createDrawerNavigator } from "react-navigation";
+import { createAppContainer,createDrawerNavigator } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import AppNavigation from "./component/AppNavigation"
+
 import NavigationService from "./component/NavigationService";
 import AsyncStorage from "@react-native-community/async-storage";
+import Amplify from "aws-amplify";
 
-import SideMenu from "./component/screens/NavigationDrawer/SideMenu";
+import awsConfig from './aws_file';
 
-import Splash from './component/screens/Splash/Splash'
-import Login from './component/screens/Login/Login'
-import ForgotPassword from './component/screens/ForgotPassword/ForgotPassword'
-import Register from './component/screens/Register/Register'
-import OtpVerification from './component/screens/OtpVerification/OtpVerification'
-import Home from './component/screens/Home/Home'
-import ProductDetails from './component/screens/ProductDetails/ProductDetails'
+import { withAuthenticator } from 'aws-amplify-react-native';
 
-// Side menu
-
-const drawerNavigators = createDrawerNavigator(
-  {
-    Home: {
-      screen: Home,
-    },
-
-  },
-
-  {
-    contentComponent: (props) => (
-      <SideMenu navigation={props.navigation} drawerProps={{ ...props }} />
-    ),
-  }
-);
-
-// Side menu
-
-
-
-const AppStackAllScreen = createStackNavigator(
-  {
-    Splash: {
-      screen: Splash
-    },
-     Login: {
-      screen: Login
-    }, 
-     ForgotPassword: {
-      screen: ForgotPassword
-    },
-     Register: {
-      screen: Register
-    },
-     OtpVerification: {
-      screen: OtpVerification
-    },
-    Home: {
-      screen: drawerNavigators
-    }, 
-    ProductDetails: {
-      screen: ProductDetails
-    },
-    
-},
-  {
-    headerMode: "none",
-    mode: "modal",
-    initialRouteName: "Splash", //Splash
-    defaultNavigationOptions: {
-      gesturesEnabled: false
-    }
-  }
-);
-const NavigationScreen = createAppContainer(AppStackAllScreen);
-
-
-
+Amplify.configure(awsConfig);
 
 
 const MyStatusBar = ({backgroundColor, ...props}) => (
@@ -104,15 +44,11 @@ export default class App extends Component<Props> {
     super(props);
     }
    render() {
+    console.log("connected is------->",Amplify.configure(awsConfig))
     return (
       <View style={{ flex: 1 }}> 
        <MyStatusBar backgroundColor="#0f83cc" barStyle="light-content" />  
-        <NavigationScreen
-          ref={navigatorRef => {
-            NavigationService.setTopLevelNavigator(navigatorRef);
-          }}
-        />
-    
+          <AppNavigation/>      
         
       </View>
     );

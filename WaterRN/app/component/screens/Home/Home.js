@@ -3,6 +3,7 @@ import { Text, View,SafeAreaView,TouchableOpacity,Image,TextInput,ScrollView,Fla
 import Header from "../Header/Header";
 import styles from "./Home_Style";
 import { NavigationActions, StackActions } from "react-navigation";
+import { drawer } from "../../AppNavigation";
 
 export default class Home extends Component {
 	constructor(props) {
@@ -79,13 +80,9 @@ export default class Home extends Component {
   render() {
     return (
       <View style={{ flex: 1, }}>
-          <Header
-            navigation={this.props.navigation}
-            title={"HOME"}
-            isBack={"false"}
-            isNotification={"false"}
-          />
-         <ScrollView>
+       <Header title="Home" navigation={this.props.navigation} />
+        
+         <ScrollView style={{backgroundColor:'white'}}>
 
           <View style={styles.viewChange}>
           <Image

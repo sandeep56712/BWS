@@ -1,94 +1,88 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+
 import {
   Platform,
   StyleSheet,
-  Text,StatusBar,
-  View,TouchableOpacity,Image,
-} from 'react-native';
+  Dimensions,
+  Text,
+  Image,
+  Alert,
+  TextInput,
+  View,
+  TouchableOpacity,
+} from "react-native";
+import styles from "./HeaderStyle";
+import { drawer } from "../../AppNavigation";
 
-import styles from './Header.style';
-import { Dimensions } from 'react-native'
+const APPBAR_HEIGHT = 40;
+let deviceHeight = Dimensions.get("window").height;
+import { NavigationActions,NavigationEvents, StackActions } from "react-navigation";
 
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
-//const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
-const APPBAR_HEIGHT = hp('10%')
-let deviceHeight = Dimensions.get('window').height
-
-	/*if (deviceHeight == 812) 
-    {
-      APPBAR_HEIGHT = 70
-    }*/
 export default class Header extends Component {
-	
-	
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+   openDrawer(){
+     if(drawer != null && drawer.current != null){
+       drawer.current.open()
+     }
+   }
 	render(){
-		console.log('device height---'+deviceHeight)
-		const title=this.props;
-		const isBack=this.props.isBack;
-		const isNotification=this.props.isNotification;
-		const isSetting=this.props.isSetting;
-		console.log('header is back='+isBack);
-		console.log('title='+title);
-		console.log('app bar height =='+APPBAR_HEIGHT);
-		   
-  let button = null;
-  let search=null;
-  if(isSetting=='true'){
-  				console.log('inside settings-----------------------------');
-			search=<TouchableOpacity onPress={()=>this.props.navigation.navigate('Settings')}>	
-				<View style={{marginRight:15,marginLeft:15	}}>
-			<Image style={styles.icon} source={require('../../Image/settings_icon.png')} />
-				</View>
-			</TouchableOpacity>	
-		}else{
-			console.log('inside search-----------------------------');
-			search=
-				<TouchableOpacity onPress={()=>this.props.navigation.navigate('Search')}>	
-				<View style={{marginRight:15,marginLeft:15	}}>
-			<Image style={styles.icon} source={require('../../Image/search.png')} />
-				</View>
-			</TouchableOpacity>	
-		}
-    if (isBack=='false') {
-		       button = <TouchableOpacity onPress={()=>{this.props.navigation.openDrawer()}} >
-           <Image style={styles.menuIcon} source={require('../../Image/menu.png')}/>
-        </TouchableOpacity> 
-    } 
-		   else {
-		 button = <TouchableOpacity onPress={()=>{this.props.navigation.goBack()}} >
-			 <View style={{marginLeft:5,padding:10,justifyContent:'center',alignItems:'center',}}>
-           <Image style={styles.backIcon} source={require('../../Image/back_button.png')}/>
-			 </View>
-        </TouchableOpacity>		
-		
+    const title = this.props;
+    const isBack = this.props.isBack;
+    const isNotification = this.props.isNotification;
+    var notificationView=null;
+    var leftIcon=null;
+       if (isNotification) {
+      notificationView = (
+        <TouchableOpacity style={styles.notificationView}>
+            <Image resizeMode={"contain"} style={styles.notification_icon}  source={require("../../Image/notification.png")} />         
+          </TouchableOpacity>
+      )
+       if(isBack){
+          leftIcon=
+           <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
+            <Image
+              tintColor="black"
+              source={require("../../Image/arrow_back.png")}
+              style={styles.menuIcon}
+            />
+          </TouchableOpacity>
+       }else{
+          leftIcon= 
+          <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
+            <Image
+              tintColor="black"
+              source={require("../../Image/menu.png")}
+              style={styles.menuIcon}
+            />
+          </TouchableOpacity>
+       }
     }
-	let show_notification=null;
-	if(isNotification=='true')
-	{
-	show_notification=<View style={{alignItems:'center',flexDirection:'row'}}>
-		<TouchableOpacity style={{marginLeft:-30}} onPress={()=>this.props.navigation.navigate('Notification')}>
-			
-				<Image style={styles.icon} source={require('../../Image/notification.png')} />
-		
-		</TouchableOpacity>	
-			
-			{search}								   
-			
-		</View>
-	}else{
-		show_notification=null;
-	}
-		return(
-			<View style={{height:APPBAR_HEIGHT,backgroundColor:'white',
-				alignItems:'center',
-				flexDirection:'row'}}>
-			{button}	
-			<View style={{alignItems:'center',marginLeft:'2%',width:'80%',marginRight:'2%',justifyContent:'center'}}>
-				<Text style={styles.textHeader}>{this.props.title}</Text>
-			</View>
-			{show_notification}
-				</View>
-		);
+	return(		
+    <View style={styles.headerView}>
+    
+           <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
+            <Image
+              
+              source={require("../../Image/menu.png")}
+              style={styles.menuIcon}
+            />
+          </TouchableOpacity>
+           
+          <Text style={styles.textHeader}>{this.props.title}</Text>
+          
+          {notificationView}
+       </View>
+	);
 	}
 }
+/*<View style={styles.headerView}>
+      {backButton}
+        <View style={styles.titleView}>
+          <Text style={styles.textHeader}>{this.props.title}</Text>
+        </View>
+    </View>*/

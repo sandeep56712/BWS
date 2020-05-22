@@ -20,6 +20,7 @@
 		32080B050617172C06524E5F /* libPods-WaterRn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B46FD17CC459326E024A7FC9 /* libPods-WaterRn-tvOSTests.a */; };
 		375CA1D030CA965A17647725 /* libPods-WaterRn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B97803634D236EF3F81958C /* libPods-WaterRn.a */; };
 		616AF27D2987703177E8B610 /* libPods-WaterRn-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABED2CD101A4B7AAB0923B8C /* libPods-WaterRn-tvOS.a */; };
+		6A2B1FE924475BA10097D1E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A2B1FE824475BA10097D1E4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4A8B0CDAB6ACB45A6AA42412 /* Pods-WaterRn-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOSTests/Pods-WaterRn-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		5AC5574FE8E546AD688B1114 /* Pods-WaterRn-WaterRnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-WaterRnTests.release.xcconfig"; path = "Target Support Files/Pods-WaterRn-WaterRnTests/Pods-WaterRn-WaterRnTests.release.xcconfig"; sourceTree = "<group>"; };
 		6439530BD94B4EF80FD44F9C /* Pods-WaterRn-WaterRnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-WaterRnTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-WaterRnTests/Pods-WaterRn-WaterRnTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A2B1FE824475BA10097D1E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "WaterRn/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83217A6312B4582CD8382183 /* Pods-WaterRn-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOS/Pods-WaterRn-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8631ECADE7710A3674BEC322 /* Pods-WaterRn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn.release.xcconfig"; path = "Target Support Files/Pods-WaterRn/Pods-WaterRn.release.xcconfig"; sourceTree = "<group>"; };
 		99A9A8270BFB364A231CD91F /* Pods-WaterRn-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterRn-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterRn-tvOSTests/Pods-WaterRn-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* WaterRn */ = {
 			isa = PBXGroup;
 			children = (
+				6A2B1FE824475BA10097D1E4 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -291,7 +294,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = JQQYCG5NGP;
+						DevelopmentTeam = DBQ97BWMAM;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -340,6 +343,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6A2B1FE924475BA10097D1E4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JQQYCG5NGP;
+				DEVELOPMENT_TEAM = DBQ97BWMAM;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -659,7 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JQQYCG5NGP;
+				DEVELOPMENT_TEAM = DBQ97BWMAM;
 				INFOPLIST_FILE = WaterRn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

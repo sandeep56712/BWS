@@ -1,3 +1,41 @@
+
+// import React, { Component } from "react";
+// import {StatusBar,View} from 'react-native'
+// import Amplify from '@aws-amplify/core'
+// import {Authenticator} from 'aws-amplify-react-native'
+// import awsConfig from "../../../aws_file";
+
+// Amplify.configure(awsConfig)
+// export default class App extends Component<Props> {
+//   constructor(props) {
+//     super(props);
+//     }
+//    render() {
+//     console.log("connected is------->",Amplify.configure(awsConfig))
+//     return (
+//       <View style={{ flex: 1 }}> 
+//        <StatusBar barStyle="dark-content" />
+      
+        
+//       </View>
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { Component } from "react";
 
 import {
@@ -12,8 +50,10 @@ import {
 import styles from "./Splash_Style";
 import { NavigationActions, StackActions } from "react-navigation";
 import AsyncStorage from "@react-native-community/async-storage";
+import { Auth } from 'aws-amplify'
 
 export default class Splash extends Component {
+
   componentWillMount() {
     console.ignoredYellowBox = ["Warning: Each", "Warning: Failed"];
     // StatusBar.setHidden(true);

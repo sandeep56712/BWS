@@ -1,13 +1,13 @@
-
 import React, { PureComponent } from 'react';
-import { View, Text, NetInfo, Dimensions, StyleSheet,Alert } from 'react-native';
+import {  StyleSheet,Alert } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+/* import for langualge string file*/
 
 class CustomDialogue extends PureComponent {
 CustomAlert(text){
-		Alert.alert("GoonTunez",text,
+		Alert.alert("Water Supplier",text,
 				 [
-			   {text: 'OK', onPress: () =>{}},
+			   {text: "ok", onPress: () =>{}},
 			  // {text: 'cancel', onPress: () =>{}}
 			 ],
 			 {

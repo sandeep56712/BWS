@@ -6,6 +6,7 @@ viewChange:{
  width:'90%',
  alignSelf:'center',
  marginTop:20,
+ // backgroundColor:'white',
 
 },
 touchChange:{

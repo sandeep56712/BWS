@@ -17,15 +17,30 @@ import {
 } from "react-native";
 
 import { NavigationActions, StackActions } from "react-navigation";
-import AsyncStorage from "@react-native-community/async-storage";
+import Validation from "../../helper/Validation";
+import CustomDialogue from "../../helper/CustomDialogue";
 
 import styles from "./ForgotPassword_Style";
 
 export default class Forgot extends Component {
   constructor(props, ctx) {
     super(props);
-    this.state = {}
+    this.state = {
+      textInputEmail:'',
+    }
   }
+funcForgot(){
+  if (this.state.textInputEmail.length === 0) {
+  new CustomDialogue().CustomAlert("Please Enter Email Address");  
+  }else if(Validation.isValidEmail(this.state.textInputEmail)){
+   new CustomDialogue().CustomAlert("Please Enter valid Email Address");
+
+  }else{
+    
+    this.props.navigation.goBack();
+  }
+}
+
   render() {
     return (
          <ScrollView>
@@ -50,16 +65,17 @@ export default class Forgot extends Component {
                   keyboardType="email-address"
                   autoCapitalize="none"
                   style={styles.textInput}
-                  // onChangeText={(textInputEmail) =>
-                  //   this.setState({ textInputEmail })
-                  // }
+                  value={this.state.textInputEmail}
+                  onChangeText={(textInputEmail) =>
+                    this.setState({ textInputEmail })
+                  }
               />
                <View style={styles.viewUnderLine}/>
               </View>
               </View>
              
              
-              <TouchableOpacity style={styles.btnSignIn}>
+              <TouchableOpacity onPress={() => this.funcForgot()} style={styles.btnSignIn}>
                <Text style={styles.txtSign}>Continue</Text>
               </TouchableOpacity>
              
