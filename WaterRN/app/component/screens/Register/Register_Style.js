@@ -11,7 +11,8 @@ imageStyleLogo:{
 },
 loginContent:{
  flex:1,
- width:"100%",
+ width:"80%",
+ alignSelf:'center',
 },
 viewInput:{
 	flexDirection:'row',
@@ -81,6 +82,7 @@ btnForgot:{
    width:"60%",
    alignItem:'center',
    justifyContent:'center',
+   marginBottom:100,
 
 },
 txtSign:{
@@ -94,6 +96,7 @@ txtForgot:{
  color:'#0f83cc',
  fontWeight:'500',
  fontSize:12,
+ marginTop:5,
 },
 btnToggle:{
  width:"70%",
@@ -102,7 +105,51 @@ btnToggle:{
  marginTop:30,
 },
 
+inputView: {
+    flexDirection: "row",   
+    alignItems: "center",
+    backgroundColor: "white",
+    borderWidth: 0.5,
+    borderColor: "rgba(0,0,0,0.15)",
+    borderRadius:25,
+    margin: 10,
+    width: '90%',
+    height:50, 
+  },
+viewInputPassword:{
+  flexDirection:'row',
+  marginTop:20,
+    width:'80%',
+    alignSelf:'center',
+},
+imageIcon:{
+ height:25,
+ width:25,
+ resizeMode:'contain',
+ marginLeft:20,
+ tintColor:'#0f83cc',
+ // backgroundColor:'red',
 
+},
+  textPassword: {    
+  marginLeft: 20,
+    // fontFamily: "Lato-Regular",
+  fontSize: 14,
+  color: 'rgb(50,57,86)',
+  marginTop:20,
+  paddingBottom:15,
+  width:'100%',
+  height:"100%",
+  },
+ textEmail: { 
+    marginLeft: 20,
+    // fontFamily: "Lato-Regular",
+  fontSize: 14,
+  color: 'rgb(50,57,86)',
+  paddingTop:15,
+  paddingBottom:15,
+  width:'100%',
+  },
 
 
 

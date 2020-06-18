@@ -1,163 +1,463 @@
-import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-	Image,
-	TextInput,
-	TouchableOpacity,Dimensions,AsyncStorage,
-	ScrollView,Alert
-} from 'react-native';
+import { Alert } from "react-native";
+import NetInfo from "@react-native-community/netinfo";
 
-//const BASE_URL='http://192.168.1.110/mixtape/Api/'; 
-const BASE_URL='http://ec2-3-89-170-250.compute-1.amazonaws.com/mixtape/Api/'; 
-class Api {	
-  //static LOGIN ='Api/login';
-  static BASE_MEDIA_URL='http://ec2-3-89-170-250.compute-1.amazonaws.com/mixtape/'
-  //static BASE_MEDIA_URL='http://192.168.1.110/mixtape/'
-  static LOGIN_API ='login';
-  static GET_USER_INFO='get_user_details';
-  static REGISTER='signup';
-  static REGISTER_COMPLETE='complete_profile';
-  static UPDATE_PROFILE='update_profile';
-  static CHANGE_PASSWORD='changepassword';
-  static GET_USER_ALBUM_ALL='get_user_album_all';
-  static GET_SONG_CATEGORY='get_all_categories';
-  static CREATE_ALBUM='add_album';
-  static GET_ALBUM_LIST='get_album_songs';
-  static GET_ARTIST_OTHER_ALBUM='get_user_albums'
-  static DELETE_AUDIO_USER_ALBUM='delete_user_album_audio';
-  static DELETE_USER_ALBUM='delete_user_album';
-  static FORGOT_PASSWORD='forgotpassword';
-  static STREAM_QUALITY='changeScreamQuality';
-  static SEARCH_ALBUM='search';
-  static UPCOMING_ALBUM='upcoming_albums';
-  static GET_POPULAR='popular_albums';
-  static GET_NEW_RELEASE='new_release_albums';
-  static GET_COMMENT='get_comments';
- static SUBSCRIBE_API='subscribe';
- static GET_SUBSCRIBER='get_subscriber';
- static UNSUBSCRIBE='unsubscribe';
- static ADD_COMMENT='add_comment';
- static DOWNLOAD_SONG='download_song';
- static CHANGE_STREAM_QUALITY='changeScreamQuality';
- /*17th Dec */
- static CREATE_PLAYLIST='create_playlist';
- static GET_USER_PLAYLIST='user_playlist';
- static ADD_PLAYLIST='add_to_playlist';
- static GET_PLAYLIST_SONG='get_playlist_songs';
- static GET_TOP_VIDEO='get_page_video';
- static GET_WATS_HOT='get_whatshot_song';
- static GET_ALL_ALBUM='get_albums';
- static GET_ALL_DOWNLOADS='get_all_downloads';
- static GET_SINGLE_ALL='get_song_all';
- static GET_NOTIFICATION='get_user_notification';
- static CONTACT_US='contact_form';
- static GET_USER_ACTIVE='get_user_active';
-static TERM_CONDITION='termandcondition_page';
-static PRIVACY_POLICY='privacy_page';
-static UPCOMING_ARTIST_DJ='upcoming_artist_dj';
-static GET_USER_ALBUM_LATEST='get_user_albums_latest';
-static GET_USER_ALBUM_ALL_LATEST='get_user_album_all_latest'; // call from subscriber 
-static ADD_PLAY_COUNT='add_play_count';
-static DELETE_AUDIO_USER_ALBUM='delete_user_album_audio';
-static DELETE_VIDEO_USER_ALBUM='delete_user_album_video';
-static MIXTAPE_UPLOAD_PRICE='mixtape_upload_prices';
-static VIDEO_UPLOAD_PRICE='single_upload_video_prices';
-static AUDIO_UPLOAD_PRICE='single_upload_audio_prices';
-static GET_HOME_PAGE='landing_page_data';
-static PUBLISH_MIXTAPE='publish_mixtape_album';
-static GET_USER_VIDEO='get_user_all_videos';
-static TOP_VIDDEO_REQ='send_top_video_request';
-static GET_SONG_ALL_PAGINATION='get_song_all_pagination';
-static GET_INTERVIEW='get_interview_all';
-static GET_ADD='get_ads';
-static GET_SUBSCRIBTION_LIST='get_subscribtion_list';
-static ADD_ALBUM_LIBRARY='add_album_to_library';
-static GET_ALBUM_LIBRARY='get_library_albums';
-static DELETE_ALBUM_LIBRARY='delete_album_from_library';
-static ADD_SONG_LIBRARY='add_audio_to_library';
-static GET_SONG_LIBRARY='get_library_songs';
-static DELETE_SONG_LIBRARY='delete_audio_from_library';
-static STRIPE_PAYMENT='stripe_payment';
+const BASE_URL = "http://waterapp.beangate.in/api/";
+
+class Api {
+  //static IMAGE_BASE_URL = 'http://192.168.1.127/helply/';
+  static IMAGE_BASE_URL = "http://waterapp.beangate.in/api/";
+  static LOGIN_API = "login";
+  
+  static LOGOUT_API = "logout";
+  static REGISTER_API = "users";
+  static GET_ALL_ZONES = "zones";
+  static ADD_TO_USER = "users/";
+  static ADD_A_NEW_PLACE = "places";
+  static USER = "user";
+  static TRIPS = "trips";
+  static LOGOUT = "logout";
+  static SHIFTS = "shifts";
 
 
-  static headers() {
-    return {
-      Accept: 'application/json',
-       "Content-type": "application/json; charset=UTF-8",
-      'dataType': 'json',
+  //phase change API -
+  static CHECK_VERSION_UPDATE = "check_version_update";
+
+  static getBaseUrl(route) {
+    return BASE_URL + route;
+  }
+
+  /*static setHeader(token) {
+    return headers: {
+        "Content-Type": "application/json;charset=UTF-8"
+        'Authorization': 'Bearer ' + token
+      }
+  }*/
+
+  static getWithHeader = async (route, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      console.log("testing----->")
+      return this.xhrJsonToken(BASE_URL + route, "" ,"GET", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
     }
   }
-	
-  static get(route,url) {
-    return this.xhr(BASE_URL+route, null, 'GET');
+
+  static getHeader = async (route, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJsonWoResponseBody(BASE_URL + route, "" ,"GET", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
+    }
   }
 
-  static put(route, params,url) {
-    return this.xhr(route, params, 'PUT')
+  static patchWithHeader = async (route, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJsonToken(BASE_URL + route, "" ,"PATCH", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
+    }
   }
 
-	static post(route, params) {
-    return this.xhr(BASE_URL+route, params, 'POST')
+  static patchHeader = async (route, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJsonWoResponseBody(BASE_URL + route, "" ,"PATCH", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
+    }
   }
-	static Multipart(route, params){
-		 return this.xhrGet(BASE_URL+route, params, 'POST')
-	}
+
+  static patchWithHeaderParams = async (route, params, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJsonToken(BASE_URL + route, params ,"PATCH", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
+    }
+  }
+
+  static getUrl = async(route) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrGet(BASE_URL + route, "GET");
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        return responseJson;
+    }
+  }
+
+  static getUrlToken = async(route, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrLogout(BASE_URL + route, "GET", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        return responseJson;
+    }
+  }
+
+  static put(route, params, url) {
+    return this.xhrJson(route, params, "PUT");
+  }
+
+  static post = async (route, params) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJson(BASE_URL + route, params, "POST");
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        return responseJson;
+    }
+  }
+
+  static postWithHeader = async (route, params, token) => {
+
+    var stateConnected = await this.checkNetworkConnection();
+
+    if (stateConnected) {
+      return this.xhrJsonToken(BASE_URL + route, params, "POST", token);
+    } else {
+        var responseJson = {
+            'status' : 301
+        }
+        console.log("Apicalling", "JSON.stringify(json) :- " + JSON.stringify(responseJson));
+        // Alert.alert("Internet not connected.!!!");     
+        return responseJson;
+    }
+  }
+  
+  static Multipart(route, params) {
+    return this.xhrGet(BASE_URL + route, params, "POST");
+  }
 
   static delete(route, params) {
-    return this.xhr(route, params, 'DELETE')
+    return this.xhrJson(route, params, "DELETE");
   }
 
-  static xhr(route, params, verb) {
-  console.log('complete url  ' +route); 
+  static checkNetworkConnection = async () => {
 
-    console.log("params =="+params);
-    console.log("verb =="+verb);
+    console.log("Apicalling.JS","Inside checkNetworkConnection() ");
 
-  return fetch(route, {
-     method: verb,
-     headers: {
-       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+    var isConnected = false;
+
+    await NetInfo.fetch().then(state => {
+      console.log("Apicalling.Js","Connection type", state.type);
+      console.log("Apicalling.Js","Is connected?", state.isConnected);
+
+      isConnected =  state.isConnected;
+
+     /* if (isConnected) {
+        return true;
+      } else {
+        console.log("Apicalling.Js"," inside else");
+        Alert.alert("Internet not connected.!!!")
+        var responseJson = {
+            'status' : 301
+          }
+        console.log("Apicalling.Js"," inside else responseJson :- " + JSON.stringify(responseJson));
+        return false;
+      }*/
+      //return false;
+    });
+
+    return isConnected;
+  }
+
+  static xhrJson(route, params, verb) {
+
+    var token, status;
+    console.log("Apicalling",'complete url Apicalling xhrJson:- '+route+" "+params);
+    return fetch(route, {
+      method: verb,
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      },    
+      body: params
+    })
+      .then(response => {
+        console.log("Apicalling"," response only :- "+JSON.stringify(response));
+        console.log("Apicalling"," authorization token 213:- "+ response.headers.map.authorization);
+        console.log("Apicalling"," status:- "+response.status);
+
+        status = response.status;
+
+        if (response.headers.map.authorization != undefined || response.headers.map.authorization != null) {
+          token = response.headers.map.authorization;
+        } else {
+          token = null;
+        }
+        console.warn("Apicalling"," token abcd:- "+token);
+
+        if (status ==  200 || status ==  201) {
+          return response.json();
+        } else {
+          var response = {
+            status:status
+          }
+          return response;
+        }
+        // return response.json();
+      })
+      .then(json => {
+        
+        console.warn("Apicalling","inside status :- " + status);
+        console.warn("Apicalling","inside token :- " + token);
+        console.log ("Apicalling ","Response Json :- " + JSON.stringify(json));
+
+        var responseJson = {
+          'status':status,
+          'data':json,
+          'token':token
+        }
+        console.warn ("Apicalling ","Final Json created :- " + JSON.stringify(responseJson));
+
+        return responseJson;
+      })
+      .catch(error => {
+        console.log("complete url error", route + " " + params + " " + verb);
+        //alert("Error ");
+        console.log(error);
+      });
+  }
+
+  static xhrJsonToken(route, params, verb, token) {
+
+    console.log("Apicalling","URL route xhrJsonToken :- "+route);
+
+    var status;
+    return fetch(route, {
+      method: verb,
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'X-API': token
       },
-     body: params   
-   })
-   .then(response => response.json())
-  .then(json =>{console.log(json)
-   return json })
-  .catch( (error) => {
-	 
- 
+      body: params
     })
+      .then(response => {
+        console.log("Apicalling"," response only :- "+JSON.stringify(response));
+
+        var dataSize = response._bodyInit._data.size;
+        console.log("Apicalling","Response dataSize :- " + dataSize);      
+        console.log("Apicalling","xhrJsonToken response.status :- " + response.status);      
+        
+        status = response.status;
+
+        if (status == 404) {
+
+          var responseJson = {
+            'status':status,
+            'data':[],
+          }
+          console.log("Apicalling"," responseJson only :- "+JSON.stringify(responseJson));
+          return responseJson;
+
+        } else {
+          return response.json();
+        }
+      })
+      .then(json => {
+        var responseJson = {
+          'status':status,
+          'data':json,
+        }
+        console.warn ("Apicalling ","Final Json created :- " + JSON.stringify(responseJson));
+
+        return responseJson;
+      })
+      .catch(error => {
+        console.log("complete url error", route + " " + params + " " + verb);
+        //alert("Error ");
+        console.log(error);
+      });
   }
 
- static xhrGet(route, params, verb) {
-  console.log('complete url  ' +route); 
 
-    console.log("params =="+params);
-    console.log("verb =="+verb);
+  static xhrJsonWoResponseBody(route, params, verb, token) {
 
-  return fetch(route, {
-     method: verb,
-     headers: {
-       'Content-Type': 'multipart/form-data'
-      }
-   })
-  then((response)=>response.json()).then((responseData)=>{
-			  console.log("message---------"+responseData.message);
-            alert("Response:"+JSON.stringify(responseData))
-            if(responseData.data.status == 404){
-               // Alert.alert("KOOPI", responseData.message)
-				console.log("message---------"+responseData.message);
-              }
-	  return responseData
-         })
-   .catch( (error) => {
+    console.log("Apicalling","URL route xhrJsonWoResponseBody :- "+route);
 
+    var status;
+    return fetch(route, {
+      method: verb,
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'X-API': token
+      },
+      body: params
     })
+      .then(response => {
+        console.log("Apicalling"," response only :- "+JSON.stringify(response));
+        status = response.status;
+        if (response.ok) {
+          var dataSize = response._bodyInit._data.size;
+          console.log("Apicalling"," response dataSize :- "+dataSize);          
+          var responseJson = {
+            'status':status,
+            'data':[],
+          }
+          console.log("Apicalling"," responseJson only :- "+JSON.stringify(responseJson));
+          return responseJson;
+        } else {
+          var responseJson = {
+            'status':status,
+            'data':[],
+          }
+          console.log("Apicalling"," responseJson only :- "+JSON.stringify(responseJson));
+          return responseJson;
+        }
+      })
+      .catch(error => {
+        console.log("complete url error", route + " " + params + " " + verb);
+        //alert("Error ");
+        console.log(error);
+      });
+  }
 
+  static xhrGet(route, verb) {
+
+    var status;
+    return fetch(route, {
+      method: verb,
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      }
+    })
+      .then(response => {
+        console.log("Apicalling"," response only :- "+JSON.stringify(response));
+        status = response.status;
+        return response.json();
+      })
+      .then(json => {
+
+        var responseJson = {
+          'status':status,
+          'data':json,
+        }
+        console.warn ("Apicalling ","Final Json created :- " + JSON.stringify(responseJson));
+
+        return responseJson;
+      })
+      .catch(error => {
+        console.log("complete url error", route + " " + params + " " + verb);
+        //alert("Error ");
+        console.log(error);
+      });
+  }
+
+  static uploadImage(route, data) {
+    var url = BASE_URL + route;
+    console.log("uploadImage before  calling " + url, data);
+    return fetch(
+      url,
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "multipart/form-data"
+        },
+        body: data
+      },
+      { timeout: 20000 }
+    )
+      .then(response => {
+        console.log(" uploadImage response" + url, response);
+        return response.json();
+      })
+      .then(json => {
+        console.log("uploadImage complete url success " + url, data, json);
+        return json;
+      })
+      .catch(error => {
+        console.log("uploadImage complete url error " + url, data, error);
+        return { status: 500, message: "error to upload image ", error: error };
+      });
+  }
+
+  static xhrLogout(route, verb, token) {
+    console.log('complete url Apicalling :- ',route);
+    return fetch(route, {
+      method: verb,
+      headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'X-API': token
+      }
+    })
+      .then(response => {
+        console.log(response);
+        return response.json();
+      })
+      .then(json => {
+        //alert(json);
+        console.log(
+          "complete url success xhrLogout " + route + " " + params + " " + verb,
+          json
+        );
+        return json;
+      })
+      .catch(error => {
+        console.log("complete url error xhrLogout", route + " " + params + " " + verb);
+        //alert("Error ");
+        console.log(error);
+      });
   }
 }
-export default Api
+
+export default Api;
