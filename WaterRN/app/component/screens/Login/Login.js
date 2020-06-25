@@ -34,7 +34,7 @@ export default class Login extends Component {
     this.state = {
      textInputEmail:'',
      textInputPassword:'',
-      border_clr: "rgba(0,0,0,0.15)",
+      border_clr: "#01b875",
       inputwidth: 1,  
 
     }
@@ -58,10 +58,10 @@ callRegister()
 
 }
 onTextFocus(select){ 
-    this.setState({selectPos:select, border_clr: "#0f83cc", inputwidth: 1 });
+    this.setState({selectPos:select, border_clr: "#01b875", inputwidth: 1 });
   }
    onTextBlur(select) {
-    this.setState({selectPos:select, border_clr: "rgba(0,0,0,0.15)", inputwidth: 1 });
+    this.setState({selectPos:select, border_clr: "#01b875", inputwidth: 1 });
   }
   callLoginApi = async () => {
     // # Login from openapi.yaml file
@@ -157,7 +157,7 @@ callGetTripDetailsApi = async (authorized_token) => {
            <View style={styles.container}>
               <Image
               style={styles.imageStyleLogo}
-              source={require("../../Image/logo.png")}
+              source={require("../../Image/logo.jpg")}
             />
             <View style={styles.loginContent}>
               <View style={styles.viewInput}>
@@ -176,7 +176,7 @@ callGetTripDetailsApi = async (authorized_token) => {
                   style={styles.textEmail}
                   onFocus={() => this.onTextFocus(1)}
                   onBlur={() => this.onTextBlur(1)}
-                  placeholder="Enter Email or Mobile number"
+                  placeholder="Email or Phone"
                   underlineColorAndroid="transparent"
                   placeholderTextColor="#8C97AA"
                   spellCheck={false}
@@ -228,20 +228,8 @@ callGetTripDetailsApi = async (authorized_token) => {
               <TouchableOpacity onPress={() =>this.login()} style={styles.btnSignIn}>
                <Text style={styles.txtSign}>LOG IN</Text>
               </TouchableOpacity>
-               <TouchableOpacity onPress={() =>this.login()} style={styles.btnFb}>
-               <Image
-                  style={styles.imageIconFB}
-                  source={require("../../Image/facebook.png")}
-                />
-               <Text style={styles.txtFB}>FACEBOOK</Text>
-              </TouchableOpacity> 
-              <TouchableOpacity onPress={() =>this.login()} style={styles.btnGmail}>
-               <Image
-                  style={styles.imageIconFB}
-                  source={require("../../Image/google.png")}
-                />
-               <Text style={styles.txtFB}>GOOGLE</Text>
-              </TouchableOpacity>
+               
+              
                <View style={styles.viewNewAccount}>
                 <Text style={styles.textNoAccount}>Don't have an account ?</Text>
 

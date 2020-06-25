@@ -23,7 +23,7 @@ viewInput:{
 viewInputPassword:{
 	flexDirection:'row',
 	marginTop:20,
-    width:'80%',
+    width:'70%',
     alignSelf:'center',
 },
 imageIcon:{
@@ -35,7 +35,7 @@ imageIcon:{
 },
 viewUnderLine:{
  height:1,
- backgroundColor:'#0f83cc',
+ backgroundColor:'#01b875',
  marginLeft: 10,
 
 },
@@ -53,7 +53,7 @@ textInput:{
 },
 btnSignIn:{
    height:40,
-   backgroundColor:'#0f83cc',
+   backgroundColor:'#01b875',
    marginTop:50,
    borderRadius:20,
    alignSelf:'center',
@@ -64,7 +64,7 @@ btnSignIn:{
 },
 btnRegistration:{
    height:40,
-   backgroundColor:'#0f83cc',
+   backgroundColor:'#01b875',
    marginTop:20,
    borderRadius:20,
    alignSelf:'center',
@@ -75,7 +75,7 @@ btnRegistration:{
 },
 btnForgot:{
    height:20,
-   // backgroundColor:'#0f83cc',
+   // backgroundColor:'#01b875',
    marginTop:5,
    borderRadius:20,
    alignSelf:'center',
@@ -86,14 +86,14 @@ btnForgot:{
 
 },
 txtSign:{
- textAlign:'center',
- color:'white',
- fontWeight:'500',
- fontSize:18,
+  textAlign:'center',
+  color:'white',
+  fontWeight:'500',
+  fontSize:15,
 },
 txtForgot:{
  textAlign:'center',
- color:'#0f83cc',
+ color:'#01b875',
  fontWeight:'500',
  fontSize:12,
  marginTop:5,
@@ -110,7 +110,7 @@ inputView: {
     alignItems: "center",
     backgroundColor: "white",
     borderWidth: 0.5,
-    borderColor: "rgba(0,0,0,0.15)",
+    borderColor: "white",
     borderRadius:25,
     margin: 10,
     width: '90%',
@@ -127,7 +127,7 @@ imageIcon:{
  width:25,
  resizeMode:'contain',
  marginLeft:20,
- tintColor:'#0f83cc',
+ tintColor:'#01b875',
  // backgroundColor:'red',
 
 },
@@ -137,8 +137,9 @@ imageIcon:{
   fontSize: 14,
   color: 'rgb(50,57,86)',
   marginTop:20,
-  paddingBottom:15,
-  width:'100%',
+  paddingTop:5,
+  paddingBottom:20,
+  width:'70%',
   height:"100%",
   },
  textEmail: { 
@@ -146,9 +147,9 @@ imageIcon:{
     // fontFamily: "Lato-Regular",
   fontSize: 14,
   color: 'rgb(50,57,86)',
-  paddingTop:15,
-  paddingBottom:15,
-  width:'100%',
+  paddingTop:5,
+  paddingBottom:20,
+  width:'70%',
   },
 
 

@@ -23,11 +23,12 @@ viewInput:{
   marginLeft: 20,
     // fontFamily: "Lato-Regular",
   fontSize: 14,
-  color: 'rgb(50,57,86)',
-  marginTop:20,
+  paddingTop:15,
   paddingBottom:15,
-  width:'100%',
+  color: 'rgb(50,57,86)',
+  width:'70%',
   height:"100%",
+  flexWrap:'wrap',
   },
  textEmail: { 
     marginLeft: 20,
@@ -36,18 +37,20 @@ viewInput:{
   color: 'rgb(50,57,86)',
   paddingTop:15,
   paddingBottom:15,
-  width:'100%',
+  width:'70%',
+  flexWrap:'wrap',
   },
 inputView: {
     flexDirection: "row",   
     alignItems: "center",
     backgroundColor: "white",
     borderWidth: 0.5,
-    borderColor: "rgba(0,0,0,0.15)",
+    borderColor: "white",
     borderRadius:25,
     margin: 10,
     width: '90%',
     height:50, 
+    
   },
 viewInputPassword:{
 	flexDirection:'row',
@@ -60,7 +63,7 @@ imageIcon:{
  width:25,
  resizeMode:'contain',
  marginLeft:20,
- tintColor:'#0f83cc',
+ tintColor:'#01b875',
  // backgroundColor:'red',
 
 },
@@ -71,13 +74,13 @@ imageIconFB:{
  marginLeft:20,
  alignSelf:'center',
  marginLeft:90,
- // tintColor:'#0f83cc',
+ // tintColor:'#01b875',
  // backgroundColor:'red',
 
 },
 viewUnderLine:{
  height:1,
- backgroundColor:'#0f83cc',
+ backgroundColor:'#01b875',
  marginLeft: 10,
 
 },
@@ -95,7 +98,7 @@ textInput:{
 },
 btnSignIn:{
    height:50,
-   backgroundColor:'#0f83cc',
+   backgroundColor:'#01b875',
    marginTop:50,
    borderRadius:25,
    alignSelf:'center',
@@ -136,7 +139,7 @@ btnGmail:{
 },
 btnRegistration:{
    height:40,
-   backgroundColor:'#0f83cc',
+   backgroundColor:'#01b875',
    marginTop:20,
    borderRadius:20,
    alignSelf:'center',
@@ -147,7 +150,7 @@ btnRegistration:{
 },
 btnForgot:{
    height:40,
-   // backgroundColor:'#0f83cc',
+   // backgroundColor:'#01b875',
    //marginTop:5,
    borderRadius:20,
    alignSelf:'flex-end',
@@ -176,7 +179,7 @@ txtForgot:{
  textAlign:'center',
  justifyContent:'flex-end',
  alignSelf:'flex-end',
- color:'#0f83cc',
+ color:'#01b875',
  fontWeight:'500',
  fontSize:12,
 
@@ -198,7 +201,7 @@ touchClick:{
 
 },
 textClick:{
- color:'#0f83cc',
+ color:'#01b875',
   // fontFamily: 'Lato-Bold',
   fontSize: 14,
   marginLeft: 3

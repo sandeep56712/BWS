@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "941813625120",
+    "firebase_url": "https://watersupplier-ed051.firebaseio.com",
+    "project_id": "watersupplier-ed051",
+    "storage_bucket": "watersupplier-ed051.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941813625120:android:0e2f162a7022fb71882745",
+        "android_client_info": {
+          "package_name": "com.waterrn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941813625120-9rkgrg24f8l87c4rfrt4u63d23vopvkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-g9wRMwb15mpEhwUEv6Gd52KHOyL7U6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941813625120-9rkgrg24f8l87c4rfrt4u63d23vopvkb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "941813625120-h1kbnlt0p900c5scm6ne7mu3hujjr6m0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wv.psuh"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
