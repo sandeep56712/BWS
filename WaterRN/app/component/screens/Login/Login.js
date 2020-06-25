@@ -20,22 +20,20 @@ import { NavigationActions, StackActions } from "react-navigation";
 import AsyncStorage from "@react-native-community/async-storage";
 import Validation from "../../helper/Validation";
 import CustomDialogue from "../../helper/CustomDialogue";
-
 import styles from "./Login_Style";
-
 import Api from '../../webservice/ApiCalling';
-
-
 
 
 export default class Login extends Component {
   constructor(props, ctx) {
     super(props);
-    this.state = {
-     textInputEmail:'',
-     textInputPassword:'',
-      border_clr: "#01b875",
-      inputwidth: 1,  
+    this.state = 
+    {
+       textInputEmail:'',
+       textInputPassword:'',
+       border_clr: "#01b875",
+       inputwidth: 1, 
+       loading:false,
 
     }
   }
@@ -43,14 +41,14 @@ export default class Login extends Component {
 
 login(){
   const {textInputPassword,textInputEmail} = this.state;
-  // if (textInputEmail.length === 0) {
-  // new CustomDialogue().CustomAlert("Please Enter Email Address");
-  // } else if(textInputPassword.length == 0){
-  // new CustomDialogue().CustomAlert("Please Enter Password");
-  // }else{
+  if (textInputEmail.length === 0) {
+  new CustomDialogue().CustomAlert("Please Enter Email Address");
+  } else if(textInputPassword.length == 0){
+  new CustomDialogue().CustomAlert("Please Enter Password");
+  }else{
     this.callLoginApi()
-    // this.props.navigation.navigate("Home");
-  // }
+    
+  }
 }
 callRegister()
 {
@@ -65,94 +63,78 @@ onTextFocus(select){
   }
   callLoginApi = async () => {
     // # Login from openapi.yaml file
-
-    const {emailValue, passwordValue, device_token} = this.state; 
-
-    var params ;
-
-      var params = {
-        email:"sandeep.webvillee@gmail.com",
-        password:"abc123",
+    const {textInputEmail, textInputPassword} = this.state; 
+    var params = {
+        email:textInputEmail,
+        password:textInputPassword,
         
       };
     
-
-    console.log("Login.JS"," LOGIN_API device_token :- " + device_token);
     console.log("Login.JS"," LOGIN_API request params :- " + JSON.stringify(params));
     var jsonParams = JSON.stringify(params);
-
     try { 
       this.setState({ loading: true});
       var jsonDataList = await Api.post(Api.LOGIN_API, jsonParams);
-
-      // console.log("Login.JS"," Login jsonDataList.id :- " + JSON.stringify(jsonDataList));
       if(jsonDataList.status == 200 ) {  //
-
         var data =  jsonDataList.data;
+        this.setState({ loading: false});
         console.log("data is----->",data);
-        this.callGetTripDetailsApi("Bearer " + data.token)
-        // Login Response
-        /*
-        {"status":200,"data":{"userName":"demo","password":null,"id":"c43eaf2f-893f-4f5b-b484-030975a45a62",
-        "firstName":"Demo","lastName":"User","created":"2020-01-16T13:47:02.981Z","email":"demo@user.com",
-        "primaryPhone":null,"otherPhone":null,"groups":[],"roles":["ADMIN"],"active":true,"zones":null,
-        "places":null,"placeNicknames":null},
-        "token":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW1vIiwiZXhwIjoxNTgwNTQxOTMyfQ.3Ox_iY9be4sCQv_2lObA0iNFU-9hfUQ08FNpMZnO5u-uYIRy0yTHpX74-3mUkRyRHx2a6QPRWW9QS8BejuoAPw"}'
-        */ 
-
-        // this.saveDataToAsyncStorage(jsonDataList);
-
+        this.saveData(data);
       } else if(jsonDataList.status == 403 ) {
         this.setState({ loading: false});
         console.log("Login.JS"," 403 response :- " + JSON.stringify(jsonDataList));
-        this.showAlert("Username or password is incorrect !");
+        new CustomDialogue().CustomAlert("Username or password is incorrect !");
         // new CustomDialogue().CustomAlert("Access denied");
       } else if (jsonDataList.status == 301 ) {
         this.setState({ loading: false});
         console.log("Login.JS"," 301 response :- " + JSON.stringify(jsonDataList));
-        this.showAlert("Internet not connected !");
+        new CustomDialogue().CustomAlert("Internet not connected !");
         // new CustomDialogue().CustomAlert("Access denied");
       } else{
         this.setState({ loading: false});
-        this.showAlert("Some error occurred !");
+        new CustomDialogue().CustomAlert("Some error occurred !");
       }
     }  catch(error){
       console.log("Login.Js", "inside catch" + error);
       this.setState({loading:false})
-      this.showAlert("Some error occurred !");
+      new CustomDialogue().CustomAlert("Some error occurred !");
     }
   }
 
-callGetTripDetailsApi = async (authorized_token) => {
-    //  /trips/{tripId}/driverDetails
-
-    // https://api.rubyride.co/v1/shifts/:shiftId
-
-
-    try {
-      var URL = Api.USER;
-
-      console.warn("DriverScreen.JS", " get Trip driver details url :- " + authorized_token);
-
-      var jsonDataList = await Api.getWithHeader(URL, authorized_token);
-
-      if (jsonDataList.status == 200) {
-
-     console.warn("DriverScreen.JS", " get Trip driver details url :- " + jsonDataList);
-
-      } 
-    } catch (error) {
-      console.log("DriverScreen.Js", "inside catch" + error);
-     
-    }
-  };
-
+saveData = async userData =>{
+    // await AsyncStorage.setItem("isLogin", userData.is_login);
+    // await AsyncStorage.setItem("user_id", userData.id);
+    // await AsyncStorage.setItem("user_role", userData.type);
+    // await AsyncStorage.setItem("token", userData.token);
+    // var user_data = {
+    //   user_id: userData.id,
+    //   user_name: userData.user_name,
+    //   user_email: userData.email,
+    //   user_contact: userData.mobile,
+    //   user_role: userData.type,
+    //   user_gender:userData.gender,
+    //   user_profile: "",
+    //   user_address: userData.address,    
+    //   token:userData.token  
+    // };
+    // await AsyncStorage.setItem("userData", JSON.stringify(user_data));
+    this._navigateTo("Home");
+ 
+}
  
 
-  render() {
+render() {
+ if(this.state.loading){
+      return(
+        <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
+          <ActivityIndicator animating={true} size="large" color="#57C21B" style={{justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center',  }}/>
+        </View>
+       )
+      }
     return (
-         <ScrollView   showsVerticalScrollIndicator ={false}
->
+         <ScrollView   showsVerticalScrollIndicator ={false}>
           <SafeAreaView  style={{ flex: 1 }}>
            <View style={styles.container}>
               <Image
@@ -182,11 +164,11 @@ callGetTripDetailsApi = async (authorized_token) => {
                   spellCheck={false}
                   returnKeyType={"next"}
                   keyboardType="default"
-                  // onChangeText={text => this.setState({ firstNameValue: text })}
-                  // value={this.state.firstNameValue}
-                  onSubmitEditing={() => {
-                    this.last_name.focus();
-                  }}
+                  onChangeText={text => this.setState({ textInputEmail: text })}
+                  value={this.state.textInputEmail}
+                  // onSubmitEditing={() => {
+                  //   this.last_name.focus();
+                  // }}
                 />
               </View>
               <View  style={[
@@ -212,11 +194,11 @@ callGetTripDetailsApi = async (authorized_token) => {
                   secureTextEntry={true}
                   returnKeyType={"next"}
                   keyboardType="default"
-                  // onChangeText={text => this.setState({ firstNameValue: text })}
-                  // value={this.state.firstNameValue}
-                  onSubmitEditing={() => {
-                    this.last_name.focus();
-                  }}
+                  onChangeText={text => this.setState({ textInputPassword: text })}
+                  value={this.state.textInputPassword}
+                  // onSubmitEditing={() => {
+                  //   this.last_name.focus();
+                  // }}
                 />
               </View>
               </View>
@@ -251,3 +233,23 @@ callGetTripDetailsApi = async (authorized_token) => {
 } 
  
 }
+
+//Don't remove shubham
+// callGetTripDetailsApi = async (authorized_token) => {
+//     try {
+//       var URL = Api.USER;
+
+//       console.warn("DriverScreen.JS", " get Trip driver details url :- " + authorized_token);
+
+//       var jsonDataList = await Api.getWithHeader(URL, authorized_token);
+
+//       if (jsonDataList.status == 200) {
+
+//      console.warn("DriverScreen.JS", " get Trip driver details url :- " + jsonDataList);
+
+//       } 
+//     } catch (error) {
+//       console.log("DriverScreen.Js", "inside catch" + error);
+     
+//     }
+//   };

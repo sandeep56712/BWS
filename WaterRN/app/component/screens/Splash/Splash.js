@@ -1,43 +1,4 @@
-
-// import React, { Component } from "react";
-// import {StatusBar,View} from 'react-native'
-// import Amplify from '@aws-amplify/core'
-// import {Authenticator} from 'aws-amplify-react-native'
-// import awsConfig from "../../../aws_file";
-
-// Amplify.configure(awsConfig)
-// export default class App extends Component<Props> {
-//   constructor(props) {
-//     super(props);
-//     }
-//    render() {
-//     console.log("connected is------->",Amplify.configure(awsConfig))
-//     return (
-//       <View style={{ flex: 1 }}> 
-//        <StatusBar barStyle="dark-content" />
-      
-        
-//       </View>
-//     );
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { Component } from "react";
-
 import {
   Platform,
   StyleSheet,
@@ -81,6 +42,17 @@ export default class Splash extends Component {
       });
     }, 2000);
   }
+ checkUserSession = async () => {
+    var isLogin = await AsyncStorage.getItem("isLogin");
+    this.interval = setTimeout(() => {
+      if (isLogin == "1") {
+        this._navigateTo("Home");
+      } else {
+        this._navigateTo("Login");
+      }
+       
+    }, 2000);
+  }; 
   navigateTo = (routeName: string) => {
     const resetAction = StackActions.reset({
       index: 0,
