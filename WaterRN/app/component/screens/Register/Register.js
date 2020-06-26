@@ -25,6 +25,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 
 import styles from "./Register_Style";
 import firebase from "react-native-firebase";
+import Api from '../../webservice/ApiCalling';
 
 export default class Register extends Component {
   constructor(props, ctx) {
@@ -85,6 +86,7 @@ export default class Register extends Component {
     } else if (textInputPassword != textInputCnfPassword) {
       new CustomDialogue().CustomAlert("Confirm password does not match");
     } else {
+      // this.registerApi()
       this.signIn();
       // new CustomDialogue().CustomAlert("Confirm password does not match");
     }
@@ -115,7 +117,8 @@ export default class Register extends Component {
             console.log("user is------>", user);
             new CustomDialogue().CustomAlert("mobile number verified");
             this.setState({ loading: false });
-            this.props.navigation.navigate("Home");
+            this.registerApi();
+            
           })
           .catch((error) => this.verify(error));
       }
@@ -161,11 +164,11 @@ export default class Register extends Component {
               placeholder="Full Name"
               keyboardType="default"
               returnKeyType={"next"}
-              // onChangeText={text => this.setState({ firstNameValue: text })}
-              // value={this.state.firstNameValue}
-              onSubmitEditing={() => {
-                this.last_name.focus();
-              }}
+              onChangeText={text => this.setState({ textInputFullName: text })}
+              value={this.state.textInputFullName}
+              // onSubmitEditing={() => {
+              //   this.last_name.focus();
+              // }}
             />
           </View>
         </View>
@@ -193,11 +196,11 @@ export default class Register extends Component {
               placeholder="Phone"
               returnKeyType={"next"}
               keyboardType="numeric"
-              // onChangeText={text => this.setState({ firstNameValue: text })}
-              // value={this.state.firstNameValue}
-              onSubmitEditing={() => {
-                this.last_name.focus();
-              }}
+              onChangeText={text => this.setState({ textInputContact: text })}
+              value={this.state.textInputContact}
+              // onSubmitEditing={() => {
+              //   this.last_name.focus();
+              // }}
             />
           </View>
         </View>
@@ -224,10 +227,9 @@ export default class Register extends Component {
               spellCheck={false}
               placeholder="Email"
               keyboardType="email-address"
-              secureTextEntry={true}
               returnKeyType={"next"}
-              // onChangeText={text => this.setState({ firstNameValue: text })}
-              // value={this.state.firstNameValue}
+              onChangeText={text => this.setState({ textInputEmail: text })}
+              value={this.state.textInputEmail}
               onSubmitEditing={() => {
                 this.last_name.focus();
               }}
@@ -260,11 +262,11 @@ export default class Register extends Component {
               secureTextEntry={true}
               returnKeyType={"next"}
               keyboardType="default"
-              // onChangeText={text => this.setState({ firstNameValue: text })}
-              // value={this.state.firstNameValue}
-              onSubmitEditing={() => {
-                this.last_name.focus();
-              }}
+              onChangeText={text => this.setState({ textInputPassword: text })}
+              value={this.state.textInputPassword}
+              // onSubmitEditing={() => {
+              //   this.last_name.focus();
+              // }}
             />
           </View>
         </View>
@@ -294,11 +296,11 @@ export default class Register extends Component {
               secureTextEntry={true}
               returnKeyType={"next"}
               keyboardType="default"
-              // onChangeText={text => this.setState({ firstNameValue: text })}
-              // value={this.state.firstNameValue}
-              onSubmitEditing={() => {
-                this.last_name.focus();
-              }}
+              onChangeText={text => this.setState({ textInputCnfPassword: text })}
+              value={this.state.textInputCnfPassword}
+              // onSubmitEditing={() => {
+              //   this.last_name.focus();
+              // }}
             />
           </View>
         </View>
@@ -313,8 +315,8 @@ export default class Register extends Component {
             selectedTextStyle={{ fontSize: 16, fontWeight: "bold" }}
             hasPadding
             options={[
-              { label: " Customer  ", value: "0" }, //images.masculino = require('./path_to/assets/img/masculino.png')
-              { label: "Retailer ", value: "1" }, //images.feminino = require('./path_to/assets/img/feminino.png')
+              { label: " Customer  ", value: "consumer" }, //images.masculino = require('./path_to/assets/img/masculino.png')
+              { label: "Retailer ", value: "Retailer" }, //images.feminino = require('./path_to/assets/img/feminino.png')
             ]}
           />
         </View>
@@ -413,4 +415,158 @@ export default class Register extends Component {
       </ScrollView>
     );
   }
+
+  registerApi = async () => {
+    console.log("inside register api------>")
+   
+    const {textInputEmail, textInputPassword,textInputContact,textInputFullName,customer_type } = this.state; 
+    var params = {
+        email:textInputEmail,
+        password:textInputPassword,
+        name:textInputFullName,
+        phone:textInputContact,
+        user_type:customer_type
+        
+      };
+    
+    console.log("Register.JS"," LOGIN_API request params :- " + JSON.stringify(params));
+    var jsonParams = JSON.stringify(params);
+    try { 
+      this.setState({ loading: true});
+      var jsonDataList = await Api.post(Api.REGISTER, jsonParams);
+      if(jsonDataList.status == 200 ) {  //
+        var data =  jsonDataList.data.user_details;
+        this.setState({ loading: false});
+        console.log("data is----->",data);
+        this.saveData(data);
+        this.props.navigation.navigate("Home");
+      } else if(jsonDataList.status == 201 ) {
+        this.setState({ loading: false});
+        console.log("Login.JS"," 201 response :- " + JSON.stringify(jsonDataList));
+        new CustomDialogue().CustomAlert("Username or password is incorrect !");
+        // new CustomDialogue().CustomAlert("Access denied");
+      } else if (jsonDataList.status == 202 ) {
+        this.setState({ loading: false});
+        console.log("Login.JS"," 201 response :- " + JSON.stringify(jsonDataList));
+        new CustomDialogue().CustomAlert("Internet not connected !");
+        // new CustomDialogue().CustomAlert("Access denied");
+      } else{
+        this.setState({ loading: false});
+        new CustomDialogue().CustomAlert("Some error occurred !");
+      }
+    }  catch(error){
+      console.log("Login.Js", "inside catch" + error);
+      this.setState({loading:false})
+      new CustomDialogue().CustomAlert("Some error occurred !");
+    }
+  }
+
 }
+
+
+const ss = StyleSheet.create({
+container:{
+  flex:1,
+
+},
+imageStyleLogo:{
+  height:120,
+  width:120,
+  alignSelf:'center',
+  marginTop:120,
+},
+loginContent:{
+ flex:1,
+ width:"100%",
+},
+viewInput:{
+  flexDirection:'row',
+  marginTop:60,
+    width:'80%',
+    alignSelf:'center',
+},
+viewInputPassword:{
+  flexDirection:'row',
+  marginTop:20,
+    width:'80%',
+    alignSelf:'center',
+},
+imageIcon:{
+ height:35,
+ width:35,
+ resizeMode:'contain',
+ // backgroundColor:'red',
+
+},
+viewUnderLine:{
+ height:1,
+ backgroundColor:'#0f83cc',
+ marginLeft: 10,
+
+},
+viewBox:{
+  flexDirection:'column',
+  width:'80%',
+},
+
+textInput:{
+  marginLeft: 10,
+  // paddingLeft:5,
+    height: 25,
+  fontSize:14,
+  marginTop:3,
+},
+btnSignIn:{
+   height:40,
+   backgroundColor:'#0f83cc',
+   marginTop:30,
+   borderRadius:20,
+   alignSelf:'center',
+   width:"65%",
+   // alignItem:'center',
+   justifyContent:'center',
+
+},
+
+
+txtSign:{
+ textAlign:'center',
+ color:'white',
+ fontWeight:'500',
+ fontSize:18,
+},
+txtForgot:{
+ textAlign:'center',
+ color:'#0f83cc',
+ fontWeight:'500',
+ fontSize:16,
+ marginTop:5,
+},
+
+txt:{
+  textAlign:'center',
+  fontSize:12,
+  marginTop:5,
+  color:'grey',
+},
+txtGoback:{
+ textAlign:'center',
+ color:'#0f83cc',
+ fontWeight:'500',
+ fontSize:16,
+ marginTop:15,
+ marginLeft:10,
+},
+btnForgot:{
+  flexDirection:'row',
+  alignSelf:'center',
+},
+imageIconBack:{
+ height:25,
+ width:25,
+ resizeMode:'contain',
+ marginTop:12,
+ // backgroundColor:'red',
+
+},
+});

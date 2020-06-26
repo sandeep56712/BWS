@@ -9,7 +9,7 @@ class Api {
   static LOGIN_API = "login";
   
   static LOGOUT_API = "logout";
-  static REGISTER_API = "users";
+  static REGISTER = "register";
   static GET_ALL_ZONES = "zones";
   static ADD_TO_USER = "users/";
   static ADD_A_NEW_PLACE = "places";

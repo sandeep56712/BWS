@@ -55,6 +55,14 @@ callRegister()
       this.props.navigation.navigate("Register");
 
 }
+ _navigateTo = route => {
+    const resetAction = StackActions.reset({
+      index: 0,
+      key: null,
+      actions: [NavigationActions.navigate({ routeName: route })]
+    });
+    this.props.navigation.dispatch(resetAction);
+  };
 onTextFocus(select){ 
     this.setState({selectPos:select, border_clr: "#01b875", inputwidth: 1 });
   }
@@ -76,18 +84,18 @@ onTextFocus(select){
       this.setState({ loading: true});
       var jsonDataList = await Api.post(Api.LOGIN_API, jsonParams);
       if(jsonDataList.status == 200 ) {  //
-        var data =  jsonDataList.data;
+        var data =  jsonDataList.data.user_details;
         this.setState({ loading: false});
         console.log("data is----->",data);
         this.saveData(data);
-      } else if(jsonDataList.status == 403 ) {
+      } else if(jsonDataList.status == 201 ) {
         this.setState({ loading: false});
-        console.log("Login.JS"," 403 response :- " + JSON.stringify(jsonDataList));
+        console.log("Login.JS"," 201 response :- " + JSON.stringify(jsonDataList));
         new CustomDialogue().CustomAlert("Username or password is incorrect !");
         // new CustomDialogue().CustomAlert("Access denied");
-      } else if (jsonDataList.status == 301 ) {
+      } else if (jsonDataList.status == 202 ) {
         this.setState({ loading: false});
-        console.log("Login.JS"," 301 response :- " + JSON.stringify(jsonDataList));
+        console.log("Login.JS"," 201 response :- " + JSON.stringify(jsonDataList));
         new CustomDialogue().CustomAlert("Internet not connected !");
         // new CustomDialogue().CustomAlert("Access denied");
       } else{
@@ -102,22 +110,19 @@ onTextFocus(select){
   }
 
 saveData = async userData =>{
-    // await AsyncStorage.setItem("isLogin", userData.is_login);
+  console.log("json data is ---->",userData)
+    await AsyncStorage.setItem("isLogin", userData.account_status);
     // await AsyncStorage.setItem("user_id", userData.id);
     // await AsyncStorage.setItem("user_role", userData.type);
     // await AsyncStorage.setItem("token", userData.token);
-    // var user_data = {
-    //   user_id: userData.id,
-    //   user_name: userData.user_name,
-    //   user_email: userData.email,
-    //   user_contact: userData.mobile,
-    //   user_role: userData.type,
-    //   user_gender:userData.gender,
-    //   user_profile: "",
-    //   user_address: userData.address,    
-    //   token:userData.token  
-    // };
-    // await AsyncStorage.setItem("userData", JSON.stringify(user_data));
+    var user_data = {
+      user_name: userData.name,
+      user_email: userData.email,
+      user_phone: userData.phone,
+      user_type: userData.user_type,
+      loggedInStatus:userData.account_status,
+    };
+    await AsyncStorage.setItem("userData", JSON.stringify(user_data));
     this._navigateTo("Home");
  
 }

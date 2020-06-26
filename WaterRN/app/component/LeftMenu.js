@@ -17,6 +17,7 @@ import {
   StackActions,
   NavigationEvents,StackNavigator 
 } from "react-navigation"
+import AsyncStorage from "@react-native-community/async-storage";
 
 export default class LeftMenu extends Component {
   constructor(props) {
@@ -75,11 +76,27 @@ export default class LeftMenu extends Component {
       } 
       else if (index == 7) {
         this.setState({ selectedIndex: 0 });
-        NavigationService.navigate("Login");
-        this.props.drawer.current.close();
+        this.logout();
+        // NavigationService.navigate("Login");
       } 
   }
   //                        <View style={this.state.selectedIndex==0?{width:8,height:1,backgroundColor:"B45992"}:{}} />
+
+async logout()
+{
+  console.log("Logout calling------>")
+      var user_data = {
+          user_name: "",
+          user_email: "",
+          user_phone: "",
+          user_type: "",
+          loggedInStatus:"",
+        };
+    await AsyncStorage.setItem("userData", JSON.stringify(user_data));
+        NavigationService.navigate("Login");
+        this.props.drawer.current.close();
+  
+}
 
   render(){
      const { navigation:navigate } = this.props;

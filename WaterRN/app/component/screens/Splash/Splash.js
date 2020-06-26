@@ -20,15 +20,14 @@ export default class Splash extends Component {
     // StatusBar.setHidden(true);
     //DO SOMETHING
     this.interval = setTimeout(() => {
-      AsyncStorage.getItem("user").then((result) => {
+      AsyncStorage.getItem("userData").then((result) => {
         if (result != undefined) {
           var jsonstr = JSON.parse(result);
           console.log(
             "AsyncStorage loggedInStatus===========" + jsonstr.loggedInStatus
           );
-          //  isLoggedIn:jsonstr.loggedInStatus,
-
-          if (jsonstr.loggedInStatus == true) {
+         
+          if (jsonstr.loggedInStatus == 'Active') {
             //this.props.navigation.navigate('Home');
             this.navigateTo("Home");
           } else {
