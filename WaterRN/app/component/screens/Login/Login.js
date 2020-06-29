@@ -31,7 +31,7 @@ export default class Login extends Component {
     {
        textInputEmail:'',
        textInputPassword:'',
-       border_clr: "#01b875",
+       border_clr: "#ff7070",
        inputwidth: 1, 
        loading:false,
 
@@ -64,10 +64,10 @@ callRegister()
     this.props.navigation.dispatch(resetAction);
   };
 onTextFocus(select){ 
-    this.setState({selectPos:select, border_clr: "#01b875", inputwidth: 1 });
+    this.setState({selectPos:select, border_clr: "#ff7070", inputwidth: 1 });
   }
    onTextBlur(select) {
-    this.setState({selectPos:select, border_clr: "#01b875", inputwidth: 1 });
+    this.setState({selectPos:select, border_clr: "#ff7070", inputwidth: 1 });
   }
   callLoginApi = async () => {
     // # Login from openapi.yaml file
@@ -144,7 +144,7 @@ render() {
            <View style={styles.container}>
               <Image
               style={styles.imageStyleLogo}
-              source={require("../../Image/logo.jpg")}
+              source={require("../../Image/logo.png")}
             />
             <View style={styles.loginContent}>
               <View style={styles.viewInput}>

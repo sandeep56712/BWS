@@ -64,7 +64,7 @@ export default class Splash extends Component {
       <View style={{ flex: 1 }}>
         <Image
           style={styles.imageView}
-          source={require("../../Image/logo.jpg")}
+          source={require("../../Image/logo.png")}
         />
       </View>
     );

@@ -63,7 +63,7 @@ imageIcon:{
  width:25,
  resizeMode:'contain',
  marginLeft:20,
- tintColor:'#01b875',
+ tintColor:'#ff7070',
  // backgroundColor:'red',
 
 },
@@ -74,13 +74,13 @@ imageIconFB:{
  marginLeft:20,
  alignSelf:'center',
  marginLeft:90,
- // tintColor:'#01b875',
+ // tintColor:'#ff7070',
  // backgroundColor:'red',
 
 },
 viewUnderLine:{
  height:1,
- backgroundColor:'#01b875',
+ backgroundColor:'#ff7070',
  marginLeft: 10,
 
 },
@@ -98,7 +98,7 @@ textInput:{
 },
 btnSignIn:{
    height:50,
-   backgroundColor:'#01b875',
+   backgroundColor:'#ff7070',
    marginTop:50,
    borderRadius:25,
    alignSelf:'center',
@@ -139,7 +139,7 @@ btnGmail:{
 },
 btnRegistration:{
    height:40,
-   backgroundColor:'#01b875',
+   backgroundColor:'#ff7070',
    marginTop:20,
    borderRadius:20,
    alignSelf:'center',
@@ -150,7 +150,7 @@ btnRegistration:{
 },
 btnForgot:{
    height:40,
-   // backgroundColor:'#01b875',
+   // backgroundColor:'#ff7070',
    //marginTop:5,
    borderRadius:20,
    alignSelf:'flex-end',
@@ -179,7 +179,7 @@ txtForgot:{
  textAlign:'center',
  justifyContent:'flex-end',
  alignSelf:'flex-end',
- color:'#01b875',
+ color:'#ff7070',
  fontWeight:'500',
  fontSize:12,
 
@@ -201,7 +201,7 @@ touchClick:{
 
 },
 textClick:{
- color:'#01b875',
+ color:'#ff7070',
   // fontFamily: 'Lato-Bold',
   fontSize: 14,
   marginLeft: 3

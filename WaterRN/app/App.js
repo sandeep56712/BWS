@@ -47,7 +47,7 @@ export default class App extends Component<Props> {
     console.log("connected is------->",Amplify.configure(awsConfig))
     return (
       <View style={{ flex: 1 }}> 
-       <MyStatusBar backgroundColor="#0f83cc" barStyle="light-content" />  
+       <MyStatusBar backgroundColor="#ea6565" barStyle="light-content" />  
           <AppNavigation/>      
         
       </View>
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
     height: STATUSBAR_HEIGHT,
   },
   appBar: {
-    backgroundColor:'#013220',
+    backgroundColor:'#f5f5f6',
     height: APPBAR_HEIGHT,
   },
   content: {
     flex: 1,
-    backgroundColor: '#013220',
+    backgroundColor: '#f5f5f6',
   },
 });
 

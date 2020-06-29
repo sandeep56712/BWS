@@ -49,7 +49,7 @@ export default class Register extends Component {
   }
 
   onTextFocus(select) {
-    this.setState({ selectPos: select, border_clr: "#01b875", inputwidth: 1 });
+    this.setState({ selectPos: select, border_clr: "#ff7070", inputwidth: 1 });
   }
   onTextBlur(select) {
     this.setState({
@@ -138,7 +138,7 @@ export default class Register extends Component {
       <View>
         <Image
           style={styles.imageStyleLogo}
-          source={require("../../Image/logo.jpg")}
+          source={require("../../Image/logo.png")}
         />
         <View style={styles.loginContent}>
           <View
@@ -308,10 +308,10 @@ export default class Register extends Component {
           <SwitchSelector
             initial={0}
             onPress={(value) => this.setState({ customer_type: value })}
-            textColor="#01b875" //'#7a44cf'
+            textColor="#ff7070" //'#7a44cf'
             selectedColor="white"
-            buttonColor="#01b875"
-            borderColor="#01b875"
+            buttonColor="#ff7070"
+            borderColor="#ff7070"
             selectedTextStyle={{ fontSize: 16, fontWeight: "bold" }}
             hasPadding
             options={[
