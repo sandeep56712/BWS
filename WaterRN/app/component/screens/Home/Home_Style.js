@@ -1,13 +1,18 @@
 export default {
-
+viewMain:{
+ alignItem:'center',
+ width:'100%',
+ alignSelf:'center',
+ backgroundColor:'red',
+ height:120,
+ // marginTop:10,
+},
 viewChange:{
  flexDirection:'row',
  alignItem:'center',
  width:'90%',
  alignSelf:'center',
- marginTop:20,
- // backgroundColor:'white',
-
+ marginTop:10,
 },
 touchChange:{
 	marginLeft:"5%",
@@ -24,16 +29,16 @@ txtAddress:{
 	marginLeft:10,
 },
 viewSearch:{
-	width:"80%",
-	borderRadius:10,
-	height:35,
+	width:"90%",
+	borderRadius:5,
+	height:45,
 	borderWidth:1,
 	borderColor:'grey',
-	marginTop:40,
+	marginTop:10,
 	alignSelf:'center',
     flexDirection:'row',
     alignItem:'center',
-
+    backgroundColor:'white',
 },
 imageIcon:{
  height:20,
@@ -44,11 +49,11 @@ imageIcon:{
 
 },
 imageLocation:{
- height:0,
+ height:20,
  width:20,
  resizeMode:'contain',
  marginLeft:10,
- alignSelf:'center' ,
+ // alignSelf:'center' ,
 
 },
 textInput:{
@@ -97,15 +102,17 @@ txtShopDesc:{
 viewWaterHeater:{
 	flexDirection:'row',
 	height:90,
-	width:'85%',
+	width:'90%',
 	alignSelf:'center',
 	// backgroundColor:'red',
+	borderWidth:1,
+	borderColor:'#0f83cc',
 	marginTop:20,
 },
 viewContent:{
 	marginLeft:10,
-	width:180,
-	// backgroundColor:'pink',
+	// width:180,
+	backgroundColor:'pink',
 },
 viewRating:{
  marginLeft:45,
@@ -122,6 +129,10 @@ txtRating:{
  fontSize:14,
  // fontWeight:'bold',
 
-}
+},
+bottom: {
+  flexDirection: 'column',
+  height:90,
+},
 
 }
