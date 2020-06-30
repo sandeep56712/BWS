@@ -3,7 +3,7 @@ viewMain:{
  alignItem:'center',
  width:'100%',
  alignSelf:'center',
- backgroundColor:'red',
+ backgroundColor:'#ff7070',
  height:120,
  // marginTop:10,
 },
@@ -19,14 +19,20 @@ touchChange:{
 
 },
 btnChange:{
-	color:'#0f83cc',
+	color:'#ff7070',
 	fontSize:16,
 
 },
+txtAddressHome:{
+	color:'#ffffff',
+	fontSize:18,
+	fontWeight:'bold',
+	marginLeft:5,
+},
 txtAddress:{
-	color:'darkGrey',
+	color:'#ffffff',
 	fontSize:16,
-	marginLeft:10,
+	marginLeft:25,
 },
 viewSearch:{
 	width:"90%",
@@ -52,10 +58,18 @@ imageLocation:{
  height:20,
  width:20,
  resizeMode:'contain',
- marginLeft:10,
+ marginLeft:5,
  // alignSelf:'center' ,
 
 },
+imageNotification:{
+	height:20,
+	width:20,
+	resizeMode:'contain',
+	marginLeft:250,
+	// alignSelf:'center',
+   
+   },
 textInput:{
 	marginLeft:20,
 	color:'black',
@@ -106,19 +120,21 @@ viewWaterHeater:{
 	alignSelf:'center',
 	// backgroundColor:'red',
 	borderWidth:1,
-	borderColor:'#0f83cc',
-	marginTop:20,
+	borderRadius:8,
+	borderColor:'#ff7070',
+	marginTop:5,
 },
 viewContent:{
 	marginLeft:10,
 	// width:180,
-	backgroundColor:'pink',
+	backgroundColor:'#ffffff',
 },
 viewRating:{
  marginLeft:45,
+ marginTop:5,
  height:30,
- width:40,
- backgroundColor:'#0f83cc',
+ width:35,
+ backgroundColor:'#ff7070',
  borderRadius:5,
  alignItem:'center',
  justifyContent:'center',

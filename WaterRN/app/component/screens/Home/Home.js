@@ -86,7 +86,7 @@ export default class Home extends Component {
             <Text style={styles.txtShopDesc}>Water Cane , Bottle </Text>
           </View>
           <View style={styles.viewRating}>
-            <Text style={styles.txtRating}>5.0</Text>
+            <Text style={styles.txtRating}>4.0</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -106,11 +106,11 @@ export default class Home extends Component {
                 style={styles.imageLocation}
                 source={require("../../Image/location.png")}
               />
-              <Text style={styles.txtAddress}>339-A Gopal Nagar Indore MP</Text>
+              <Text style={styles.txtAddressHome}>Home</Text>
               <TouchableOpacity style={styles.touchChange}>
                 <Image
-                  style={styles.imageLocation}
-                  source={require("../../Image/location.png")}
+                  style={styles.imageNotification}
+                  source={require("../../Image/notification.png")}
                 />
               </TouchableOpacity>
             </View>
@@ -122,7 +122,7 @@ export default class Home extends Component {
               />
               <TextInput
                 underlineColorAndroid="transparent"
-                placeholder="Search for water......"
+                placeholder="Search for JAR.., Brand"
                 keyboardType="default"
                 placeholderTextColor="black"
                 autoCapitalize="none"
