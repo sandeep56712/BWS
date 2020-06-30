@@ -28,6 +28,7 @@ txtAddressHome:{
 	fontSize:18,
 	fontWeight:'bold',
 	marginLeft:5,
+	fontFamily:'NunitoSans-Regular',
 },
 txtAddress:{
 	color:'#ffffff',
@@ -60,6 +61,13 @@ imageLocation:{
  resizeMode:'contain',
  marginLeft:5,
  // alignSelf:'center' ,
+
+},
+imageLocation2:{
+ height:20,
+ width:20,
+ resizeMode:'contain',
+ // marginLeft:5,
 
 },
 imageNotification:{
@@ -99,6 +107,9 @@ imageList:{
 	resizeMode:'cover',
     overflow:'hidden',
 	borderRadius:10,
+	marginTop:28,
+	marginLeft:10,
+
 	// backgroundColor:'blue'
 
 
@@ -115,7 +126,7 @@ txtShopDesc:{
 },
 viewWaterHeater:{
 	flexDirection:'row',
-	height:90,
+	height:140,
 	width:'90%',
 	alignSelf:'center',
 	// backgroundColor:'red',
@@ -127,11 +138,29 @@ viewWaterHeater:{
 viewContent:{
 	marginLeft:10,
 	// width:180,
+	marginTop:28,
+	height:20,
+	// backgroundColor:'red',
+},
+viewsubContent:{
+	// marginLeft:10,
+	// width:180,
+	marginTop:5,
+	flexDirection:'row',
 	backgroundColor:'#ffffff',
 },
+viewsubBottom:{
+	// marginLeft:100,
+	// width:'100%',
+	marginTop:30,
+	alignSelf:'flex-end',
+	flexDirection:'row',
+	marginRight:40,
+	// backgroundColor:'red',
+},
 viewRating:{
- marginLeft:45,
- marginTop:5,
+ marginLeft:15,
+ marginTop:28,
  height:30,
  width:35,
  backgroundColor:'#ff7070',
@@ -149,6 +178,21 @@ txtRating:{
 bottom: {
   flexDirection: 'column',
   height:90,
+},
+viewFilter:{
+width:'90%',
+marginTop:10,
+alignSelf:'center',
+backgroundColor:'red',
+height:50,
+flexDirection:'row',
+},
+imageFilter:{
+	height:20,
+	width:20,
+	marginTop:10,
+	marginLeft:20,
+
 },
 
 }

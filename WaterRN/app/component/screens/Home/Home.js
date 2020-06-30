@@ -73,7 +73,6 @@ export default class Home extends Component {
   renderWaterHeater(item, index) {
     return (
       <TouchableOpacity
-        
         onPress={() => this.props.navigation.navigate("ProductDetails")}
       >
         <View style={styles.viewWaterHeater}>
@@ -83,12 +82,32 @@ export default class Home extends Component {
           />
           <View style={styles.viewContent}>
             <Text style={styles.txtShopName}>Shubham Water Supplier</Text>
-            <Text style={styles.txtShopDesc}>Water Cane , Bottle </Text>
+            <View style={styles.viewsubContent}>
+            <Image
+                style={styles.imageLocation2}
+                source={require("../../Image/user.png")}
+              />
+            <Text style={styles.txtShopName}>Shubham.......</Text>
+          </View>
+          <View style={styles.viewsubBottom}>
+            <Image
+                style={styles.imageLocation2}
+                source={require("../../Image/user.png")}
+              />
+            <Text style={styles.txtShopName}>5</Text>
+          </View>
+
           </View>
           <View style={styles.viewRating}>
+
             <Text style={styles.txtRating}>4.0</Text>
+
           </View>
+
+           
         </View>
+
+
       </TouchableOpacity>
     );
   }
@@ -133,7 +152,28 @@ export default class Home extends Component {
               />
             </View>
           </View>
-<SliderBox images={this.state.images} />
+          <View style={{width:"90%",marginTop:10,alignSelf:'center'}}> 
+          <SliderBox  
+            autoplay
+            
+           ImageComponentStyle={{borderRadius: 5, alignSelf:'center', width: '90%',marginRight:35}}
+
+           images={this.state.images} />
+          </View>
+          <View style={styles.viewFilter}>
+          <Image
+                  style={styles.imageFilter}
+                  source={require("../../Image/notification.png")}
+                />
+                <Text style={styles.imageFilter}>Filter</Text>
+            <Image
+                  style={styles.imageFilter}
+                  source={require("../../Image/notification.png")}
+                />  
+                <Text style={styles.imageFilter}>Filter</Text>
+                <Text style={styles.imageFilter}>Filter</Text>
+                <Text style={styles.imageFilter}>Filter</Text>
+          </View>
 
            <View style={{ marginTop: 5, marginBottom: 50 }}>
             <FlatList
