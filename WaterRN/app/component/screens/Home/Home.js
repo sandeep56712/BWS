@@ -75,38 +75,36 @@ export default class Home extends Component {
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate("ProductDetails")}
       >
+      <View>
         <View style={styles.viewWaterHeater}>
+        <View style={styles.subView}>
           <Image
             style={styles.imageList}
             source={require("../../Image/waterback.png")}
           />
           <View style={styles.viewContent}>
-            <Text style={styles.txtShopName}>Shubham Water Supplier</Text>
-            <View style={styles.viewsubContent}>
+          <Text style={styles.txtShopName}>Shubham.......</Text>
+          </View> 
+          <View style={styles.viewContent2}>
+          <Text style={styles.txtShopName}>Shubham.......</Text>
+          </View>   
+        </View>  
+            <View style={styles.viewRating}>
             <Image
-                style={styles.imageLocation2}
+                style={styles.imageLocation}
+                source={require("../../Image/location.png")}
+              />
+          <Text style={styles.txtShopName}>Shubham.......</Text>
+          <Image
+                style={styles.imageRating}
                 source={require("../../Image/user.png")}
               />
-            <Text style={styles.txtShopName}>Shubham.......</Text>
+          <Text style={styles.imageRating}>5KM</Text>
+         
           </View>
-          <View style={styles.viewsubBottom}>
-            <Image
-                style={styles.imageLocation2}
-                source={require("../../Image/user.png")}
-              />
-            <Text style={styles.txtShopName}>5</Text>
-          </View>
-
-          </View>
-          <View style={styles.viewRating}>
-
-            <Text style={styles.txtRating}>4.0</Text>
-
-          </View>
-
-           
         </View>
 
+</View>
 
       </TouchableOpacity>
     );

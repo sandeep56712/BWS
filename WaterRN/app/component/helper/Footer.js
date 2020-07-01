@@ -40,13 +40,13 @@ export default class Footer extends Component {
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
 				 <Image style={[(isSelect===3) ? s.footerIconSelected : s.footerIcon]} source={require('../images/user.png')}/>	
-				<Text style={[(isSelect===3) ? s.footerTextSelectView : s.footerTextView]}>SAVED TRIPS</Text>
+				<Text style={[(isSelect===3) ? s.footerTextSelectView : s.footerTextView]}>HOME</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
 				 <Image style={s.footerIcon} source={(isSelect===4) ? require('../images/user.png') : require('../images/user.png')} />		
 				<Text style={[(isSelect===4) ? s.footerTextSelectView : s.footerTextView]}>SCHEDULE</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
+				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Account")}}>		
 				 <Image style={[(isSelect===5) ? s.footerIconSelected : s.footerIcon]} source={require('../images/user.png')}/>	
 				<Text style={[(isSelect===5) ? s.footerTextSelectView : s.footerTextView]}>ACCOUNT</Text>
 				</TouchableOpacity>

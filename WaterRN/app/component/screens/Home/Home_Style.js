@@ -63,6 +63,19 @@ imageLocation:{
  // alignSelf:'center' ,
 
 },
+txtRating:{
+	marginTop:60,
+
+},
+imageRating:{
+ height:20,
+ width:30,
+ resizeMode:'contain',
+ marginLeft:5,
+ marginTop:60,
+ // alignSelf:'center' ,
+
+},
 imageLocation2:{
  height:20,
  width:20,
@@ -102,13 +115,14 @@ imageInspired:{
 
 },
 imageList:{
-	height:90,
-	width:90,
+	height:80,
+	width:80,
 	resizeMode:'cover',
     overflow:'hidden',
 	borderRadius:10,
-	marginTop:28,
-	marginLeft:10,
+	margin:15,
+	// marginLeft:10,
+	alignSelf:'center',
 
 	// backgroundColor:'blue'
 
@@ -194,5 +208,46 @@ imageFilter:{
 	marginLeft:20,
 
 },
+subView:{
+	backgroundColor:'red',
+	flexDirection:'row',
+	width:'30%',
+	margin:15,
+},
+viewContent:{
+	backgroundColor:'pink',
+    // width:'40%',
+    flexDirection:'row',
+    height:20,
+},
+viewContent2:{
+	backgroundColor:'yellow',
+    // width:'40%',
+    flexDirection:'row',
+    height:20,
+},
+viewRating:{
+	backgroundColor:'yellow',
+    // width:'40%',
+    flexDirection:'row',
+    marginTop:40,
+    height:20,
+    marginLeft:-15,
+},
+viewRating2:{
+	backgroundColor:'yellow',
+    // width:'40%',
+    flexDirection:'row',
+    // marginTop:40,
+    height:20,
+    marginLeft:-15,
+},
+
 
 }
+
+
+
+
+
+

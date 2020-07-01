@@ -16,6 +16,7 @@ import ForgotPassword from './screens/ForgotPassword/ForgotPassword'
 import Register from './screens/Register/Register'
 import OtpVerification from './screens/OtpVerification/OtpVerification'
 import Home from './screens/Home/Home'
+import Account from './screens/Account/Account'
 import ProductDetails from './screens/ProductDetails/ProductDetails'
 import Cart from './screens/Cart/Cart'
 import LeftMenu from "./LeftMenu";
@@ -49,6 +50,9 @@ const AppStackAllScreen = createStackNavigator(
     },
      Cart: {
       screen: Cart
+    },
+    Account: {
+      screen: Account
     },
     
 },
