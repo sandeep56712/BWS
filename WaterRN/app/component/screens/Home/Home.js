@@ -55,21 +55,7 @@ export default class Home extends Component {
     };
   }
 
-  renderInspiredCollection(item, index) {
-    return (
-      <TouchableOpacity
-        style={{
-          width: 130,
-          height: 130,
-          borderRadius: 20,
-          marginLeft: 30,
-          // backgroundColor:'red'
-        }}
-      >
-        <Image style={styles.imageInspired} source={item.image} />
-      </TouchableOpacity>
-    );
-  }
+ 
   renderWaterHeater(item, index) {
     return (
       <TouchableOpacity

@@ -1,61 +1,102 @@
 export default {
-viewMain:{
- // alignItem:'center',
- // width:'100%',
- // alignSelf:'center',
- backgroundColor:'blue',
- height:150,
- flex:1,
- // flexDirection:'row',
- // marginTop:10,
-},
-viewMain_2:{
- // alignItem:'center',
- // width:'100%',
- // alignSelf:'center',
- backgroundColor:'red',
- height:150,
- flex:1,
- width:'90%',
- alignSelf:'center',
- marginTop:-40,
- borderRadius:5,
- height:700,
-
-},
-bottom: {
-  flexDirection: 'column',
-  height:90,
-},
-viewProfile:{
-	height:100,
-	backgroundColor:'blue',
-	margin:10,
-	flexDirection:'row',
-
-},
-imageProfile:{
-
-height:50,
-width:50,
-borderRadius:25,
-backgroundColor:'blue',
-resizeMode:'contain',
-padding:10,
-margin:20,
-marginLeft:50,
-backgroundColor:'red',
-},
-txtName:{
-marginTop:35,
-},
-
-
-
-}
-
-
-
-
-
-
+  viewMain: {
+    // alignItem:'center',
+    // width:'100%',
+    // alignSelf:'center',
+    backgroundColor: "#1D85C7",
+    height: 150,
+    flex: 1,
+    // flexDirection:'row',
+    // marginTop:10,
+  },
+  viewMain_2: {
+    // alignItem:'center',
+    // width:'100%',
+    // alignSelf:'center',
+    backgroundColor: "white",
+    height: 100,
+    // flex:1,
+    width: "90%",
+    alignSelf: "center",
+    marginTop: -40,
+    borderRadius: 5,
+    height: 570,
+    shadowColor: "#000000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowRadius: 5,
+    shadowOpacity: 0.5,
+  },
+  bottom: {
+    flexDirection: "column",
+    height: 90,
+  },
+  viewProfile: {
+    height: 100,
+    backgroundColor: "#1D85C7",
+    margin: 10,
+    flexDirection: "row",
+  },
+  imageProfile: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    backgroundColor: "blue",
+    resizeMode: "contain",
+    padding: 10,
+    margin: 20,
+    marginLeft: 50,
+    backgroundColor: "red",
+  },
+  txtName: {
+    marginTop: 35,
+    fontSize: 18,
+    fontWeight: "bold",
+    // marginLeft:5,
+    fontFamily: "NunitoSans-Regular",
+  },
+  viewMainlist: {
+    height: 40,
+    width: "100%",
+    backgroundColor: "white",
+    // flexDirection:'row',
+    // justifyContent:'space-between',
+    marginBottom: 15,
+  },
+  viewSublist: {
+    marginTop: 10,
+    backgroundColor: "white",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    // marginBottom:10,
+  },
+  viewUnderline: {
+    height: 1,
+    backgroundColor: "lightgrey",
+    width: "90%",
+    alignSelf: "center",
+    marginTop: 10,
+  },
+  imgProfileList: {
+    height: 20,
+    width: 20,
+    resizeMode: "contain",
+    marginLeft: 20,
+  },
+  imgGo: {
+    height: 20,
+    width: 20,
+    resizeMode: "contain",
+    marginLeft: 10,
+  },
+  txtListName: {
+    width: "70%",
+    marginLeft: 10,
+    fontSize: 18,
+    fontWeight: "bold",
+    // marginLeft:5,
+    fontFamily: "NunitoSans-Regular",
+  },
+};
