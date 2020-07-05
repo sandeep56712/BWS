@@ -30,7 +30,7 @@ export default class Footer extends Component {
 		<View>		
 		    <View style={s.viewLine} />			
 			<View style={s.footerParentView}>			
-             <TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>
+             <TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("MyOrder")}}>
                  <Image style={s.footerIcon} source={(isSelect===1) ? require('../images/home.png') : require('../images/home.png')} />					 
 			    <Text style={[(isSelect===1) ? s.footerTextSelectView : s.footerTextView]}>Home</Text>
 				</TouchableOpacity>
@@ -89,7 +89,7 @@ var s = StyleSheet.create({
      resizeMode:'contain',
      height:26,
      width:26,
-	 tintColor:'#E6214A',
+	   tintColor:'#E6214A',
   },
   viewLine:{
 	  borderBottomColor: '#8C97AA',

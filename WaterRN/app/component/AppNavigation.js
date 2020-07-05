@@ -19,6 +19,7 @@ import Home from './screens/Home/Home'
 import Account from './screens/Account/Account'
 import ProductDetails from './screens/ProductDetails/ProductDetails'
 import Cart from './screens/Cart/Cart'
+import MyOrder from './screens/MyOrder/MyOrder'
 import LeftMenu from "./LeftMenu";
 
 
@@ -53,6 +54,9 @@ const AppStackAllScreen = createStackNavigator(
     },
     Account: {
       screen: Account
+    },
+     MyOrder: {
+      screen: MyOrder
     },
     
 },

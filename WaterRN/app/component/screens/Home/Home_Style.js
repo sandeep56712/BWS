@@ -125,13 +125,16 @@ imageInspired:{
 },
 imageList:{
 	height:80,
-	width:80,
-	resizeMode:'cover',
+	width:40,
+	resizeMode:'contain',
     overflow:'hidden',
 	borderRadius:10,
-	margin:15,
+	margin:30,
 	// marginLeft:10,
 	alignSelf:'center',
+	alignItem:'center',
+	justifyContent:'center',
+
 
 	// backgroundColor:'blue'
 
@@ -162,6 +165,7 @@ viewWaterHeater:{
 	borderRadius:8,
 	borderColor:'#ff7070',
 	marginTop:5,
+
 },
 viewContent:{
 	marginLeft:10,
@@ -211,24 +215,21 @@ viewFilter:{
 width:'90%',
 marginTop:10,
 alignSelf:'center',
-//backgroundColor:'whitesmoke',
+// backgroundColor:'whitesmoke',
 height:50,
 flexDirection:'row',
-},
-imageFilter:{
-	height:20,
-	width:20,
-	marginTop:10,
-	marginLeft:20,
 
 },
+
 subView:{
-	backgroundColor:'#ffffff',
+	backgroundColor:'red',
 	borderWidth:0.2,
 	borderRadius:8,
 	flexDirection:'row',
-	width:'30%',
+	width:100,
 	margin:15,
+
+
 },
 viewContent:{
     // width:'40%',
@@ -257,6 +258,41 @@ viewRating2:{
     height:20,
     marginLeft:-15,
 },
+viewRatings:{
+	height:25,
+	width:25,
+	backgroundColor:'red',
+	alignItems:'center',
+	justifyContent:'center',
+	marginLeft:40,
+	borderRadius:2,
+	marginTop:5,
+
+},
+txtFilter:{
+    marginTop:10,
+	marginLeft:20,
+
+},
+imageFilter:{
+	height:20,
+	width:20,
+	marginTop:10,
+	// marginLeft:10,
+
+},
+viewFilterRating:{
+	marginTop:10,
+	marginLeft:20,
+	flexDirection:'row',
+	height:20,
+	width:60,
+	backgroundColor:'pink',
+	borderRadius:5,
+	alignItems:'center',
+
+},
+
 
 
 }

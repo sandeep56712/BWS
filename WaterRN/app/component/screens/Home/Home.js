@@ -70,6 +70,11 @@ export default class Home extends Component {
           />
           <View style={styles.viewContent}>
           <Text style={styles.txtShopName}>Sandeep Water Jar</Text>
+          <View style={styles.viewRatings}>
+            <Text >5.0</Text>
+
+          </View>
+
           </View>   
         </View>  
             <View style={styles.viewRating}>
@@ -146,11 +151,29 @@ export default class Home extends Component {
                   style={styles.imageFilter}
                   source={require("../../Image/filter.png")}
                 />
-                <Text style={styles.imageFilter}>Filter By</Text>
-
-                <Text style={styles.imageFilter}>Brand</Text>
-                <Text style={styles.imageFilter}>Category</Text>
-                <Text style={styles.imageFilter}>Rating</Text>
+                <Text style={styles.txtFilter}>Filter By</Text>
+                <View style={styles.viewFilterRating}> 
+                <Text style={styles.txtFilterRating}>Brand</Text>
+                <Image
+                  style={styles.imageFilter}
+                  source={require("../../Image/filter.png")}
+                />
+                </View>
+                <View style={styles.viewFilterRating}> 
+                <Text style={styles.txtFilterRating}>Brand</Text>
+                <Image
+                  style={styles.imageFilter}
+                  source={require("../../Image/filter.png")}
+                />
+                </View>
+                <View style={styles.viewFilterRating}> 
+                <Text style={styles.txtFilterRating}>Brand</Text>
+                <Image
+                  style={styles.imageFilter}
+                  source={require("../../Image/filter.png")}
+                />
+                </View>
+                
           </View>
 
            <View style={{ marginTop: 5, marginBottom: 50 }}>
