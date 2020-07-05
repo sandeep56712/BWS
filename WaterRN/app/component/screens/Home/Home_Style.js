@@ -76,6 +76,15 @@ imageRating:{
  // alignSelf:'center' ,
 
 },
+imageDistance:{
+	height:30,
+	width:40,
+	resizeMode:'contain',
+	marginLeft:5,
+	marginTop:60,
+	// alignSelf:'center' ,
+   
+   },
 imageLocation2:{
  height:20,
  width:20,
@@ -129,10 +138,15 @@ imageList:{
 
 },
 txtShopName:{
-	// marginLeft:35,
+	 marginLeft:10,
 	// marginTop:10,
 	fontSize:16,
 	fontWeight:'bold',
+},
+txtShopAddress:{
+	// marginLeft:35,
+	// marginTop:10,
+	fontSize:16,
 },
 txtShopDesc:{
 	// marginLeft:35,
@@ -197,7 +211,7 @@ viewFilter:{
 width:'90%',
 marginTop:10,
 alignSelf:'center',
-backgroundColor:'red',
+//backgroundColor:'whitesmoke',
 height:50,
 flexDirection:'row',
 },
@@ -209,25 +223,26 @@ imageFilter:{
 
 },
 subView:{
-	backgroundColor:'red',
+	backgroundColor:'#ffffff',
+	borderWidth:0.2,
+	borderRadius:8,
 	flexDirection:'row',
 	width:'30%',
 	margin:15,
 },
 viewContent:{
-	backgroundColor:'pink',
     // width:'40%',
     flexDirection:'row',
     height:20,
 },
 viewContent2:{
-	backgroundColor:'yellow',
+	
     // width:'40%',
     flexDirection:'row',
     height:20,
 },
 viewRating:{
-	backgroundColor:'yellow',
+	
     // width:'40%',
     flexDirection:'row',
     marginTop:40,

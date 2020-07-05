@@ -69,21 +69,18 @@ export default class Home extends Component {
             source={require("../../Image/waterback.png")}
           />
           <View style={styles.viewContent}>
-          <Text style={styles.txtShopName}>Shubham.......</Text>
-          </View> 
-          <View style={styles.viewContent2}>
-          <Text style={styles.txtShopName}>Shubham.......</Text>
+          <Text style={styles.txtShopName}>Sandeep Water Jar</Text>
           </View>   
         </View>  
             <View style={styles.viewRating}>
             <Image
                 style={styles.imageLocation}
-                source={require("../../Image/location.png")}
-              />
-          <Text style={styles.txtShopName}>Shubham.......</Text>
+                source={require("../../Image/location2.png")}
+              /> 
+          <Text style={styles.txtShopAddress}>339 Gopal Nagar</Text>
           <Image
-                style={styles.imageRating}
-                source={require("../../Image/user.png")}
+                style={styles.imageDistance}
+                source={require("../../Image/distance.png")}
               />
           <Text style={styles.imageRating}>5KM</Text>
          
@@ -147,16 +144,13 @@ export default class Home extends Component {
           <View style={styles.viewFilter}>
           <Image
                   style={styles.imageFilter}
-                  source={require("../../Image/notification.png")}
+                  source={require("../../Image/filter.png")}
                 />
-                <Text style={styles.imageFilter}>Filter</Text>
-            <Image
-                  style={styles.imageFilter}
-                  source={require("../../Image/notification.png")}
-                />  
-                <Text style={styles.imageFilter}>Filter</Text>
-                <Text style={styles.imageFilter}>Filter</Text>
-                <Text style={styles.imageFilter}>Filter</Text>
+                <Text style={styles.imageFilter}>Filter By</Text>
+
+                <Text style={styles.imageFilter}>Brand</Text>
+                <Text style={styles.imageFilter}>Category</Text>
+                <Text style={styles.imageFilter}>Rating</Text>
           </View>
 
            <View style={{ marginTop: 5, marginBottom: 50 }}>

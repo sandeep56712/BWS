@@ -31,15 +31,15 @@ export default class Footer extends Component {
 		    <View style={s.viewLine} />			
 			<View style={s.footerParentView}>			
              <TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>
-                 <Image style={s.footerIcon} source={(isSelect===1) ? require('../images/user.png') : require('../images/user.png')} />					 
-			    <Text style={[(isSelect===1) ? s.footerTextSelectView : s.footerTextView]}>GO NOW</Text>
+                 <Image style={s.footerIcon} source={(isSelect===1) ? require('../images/home.png') : require('../images/home.png')} />					 
+			    <Text style={[(isSelect===1) ? s.footerTextSelectView : s.footerTextView]}>Home</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
-				<Image style={[(isSelect===2) ? s.footerIconSelected : s.footerIcon]} source={require('../images/user.png')}/>	
-				<Text style={[(isSelect===2) ? s.footerTextSelectView : s.footerTextView]}>GO LATER</Text>
+				<Image style={[(isSelect===2) ? s.footerIconSelected : s.footerIcon]} source={require('../images/order.png')}/>	
+				<Text style={[(isSelect===2) ? s.footerTextSelectView : s.footerTextView]}>Order</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
-				 <Image style={[(isSelect===3) ? s.footerIconSelected : s.footerIcon]} source={require('../images/user.png')}/>	
+				 <Image style={[(isSelect===3) ? s.footerIconSelected : s.footerIcon]} source={require('../images/order.png')}/>	
 				<Text style={[(isSelect===3) ? s.footerTextSelectView : s.footerTextView]}>HOME</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
