@@ -19,6 +19,7 @@ import {
 import SwitchSelector from "react-native-switch-selector";
 import Validation from "../../helper/Validation";
 import CustomDialogue from "../../helper/CustomDialogue";
+import OTPInputView from "@twotalltotems/react-native-otp-input";
 
 import { NavigationActions, StackActions } from "react-navigation";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -103,16 +104,18 @@ export default class Register extends Component {
       .catch((error) => this.setState({ loading: false }));
   };
 
-  confirmCode = () => {
+  confirmCode = (code) => {
+    // console.log("code is------->",code);
+    // this.setState({codeInput:code});
     const { codeInput, confirmResult } = this.state;
     this.setState({ loading: true });
-    if (codeInput.length < 6) {
+    if (code.length < 6) {
       new CustomDialogue().CustomAlert("Please enter 6 digit otp.");
       this.setState({ loading: false });
     } else {
-      if (confirmResult && codeInput.length) {
+      if (confirmResult && code.length) {
         confirmResult
-          .confirm(codeInput)
+          .confirm(code)
           .then((user) => {
             console.log("user is------>", user);
             new CustomDialogue().CustomAlert("mobile number verified");
@@ -353,31 +356,21 @@ export default class Register extends Component {
           <Text style={ss.txt}>Lorem inspum or inspum as it sometime.</Text>
           <View style={ss.loginContent}>
             <View style={ss.viewInput}>
-              <Image
-                style={ss.imageIcon}
-                source={require("../../Image/contact.png")}
-              />
-              <View style={ss.viewBox}>
-                <TextInput
-                  autoFocus
-                  underlineColorAndroid="transparent"
-                  placeholder="123456"
-                  keyboardType="numeric"
-                  autoCapitalize="none"
-                  style={ss.textInput}
-                  value={codeInput}
-                  onChangeText={(value) => this.setState({ codeInput: value })}
-                />
-                <View style={ss.viewUnderLine} />
-              </View>
+              <OTPInputView
+            style={styles.otpMainView}
+            pinCount={6}
+            // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
+            // onCodeChanged = {code => { this.setState({code})}}
+            autoFocusOnLoad
+            codeInputFieldStyle={styles.underlineStyleBase}
+            codeInputHighlightStyle={styles.underlineStyleHighLighted}
+            onCodeFilled={(code) => {
+              this.confirmCode(code)
+              // console.log("Verification code is------>" + code);
+            }}
+          />
+
             </View>
-
-            <TouchableOpacity style={ss.btnSignIn}>
-              <Text onPress={this.confirmCode} style={ss.txtSign}>
-                Continue
-              </Text>
-            </TouchableOpacity>
-
             <TouchableOpacity
               onPress={() => this.props.navigation.goBack()}
               style={ss.btnForgot}
@@ -408,7 +401,7 @@ export default class Register extends Component {
       <ScrollView>
         <SafeAreaView style={{ flex: 1 }}>
           <View style={styles.container}>
-            {!user && !confirmResult && this.renderPhoneNumberInput()}
+             {!user && !confirmResult && this.renderPhoneNumberInput()}
             {!user && confirmResult && this.renderVerificationCodeInput()}
           </View>
         </SafeAreaView>
@@ -570,3 +563,23 @@ imageIconBack:{
 
 },
 });
+
+
+/*
+<Image
+                style={ss.imageIcon}
+                source={require("../../Image/contact.png")}
+              />
+              <View style={ss.viewBox}>
+                <TextInput
+                  autoFocus
+                  underlineColorAndroid="transparent"
+                  placeholder="123456"
+                  keyboardType="numeric"
+                  autoCapitalize="none"
+                  style={ss.textInput}
+                  value={codeInput}
+                  onChangeText={(value) => this.setState({ codeInput: value })}
+                />
+                <View style={ss.viewUnderLine} />
+              </View>*/

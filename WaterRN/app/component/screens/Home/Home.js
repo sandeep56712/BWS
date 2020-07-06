@@ -179,7 +179,7 @@ export default class Home extends Component {
           </View>
         </ScrollView>
         <View style={styles.bottom}>
-          <Footer navigation={this.props.navigation} isSelect={3} />
+          <Footer navigation={this.props.navigation} isSelect={1} />
         </View>
       </View>
     );

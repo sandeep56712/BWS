@@ -151,7 +151,26 @@ imageIcon:{
   paddingBottom:20,
   width:'70%',
   },
+// otp
+ otpMainView: {
+    width: "100%",
+    height: 100,
+    // backgroundColor: "red",
+    // marginTop: 50,
+    // alignSelf: "center",
+  },
+  underlineStyleBase: {
+    width: 50,
+    height: 50,
+    borderWidth: 1,
+    alignSelf: "center",
+    // backgroundColor: "#2548AA",
+    color: "black",
+    fontSize: 25,
+    borderColor:'red',
 
+    // fontFamily:'MuseoSans_medium',
+  },
 
 
 

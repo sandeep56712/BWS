@@ -68,10 +68,30 @@ export default class Account extends Component {
  
  }
 
+click(i)
+{
+  if (i == 0) 
+  {
+        this.props.navigation.navigate("AddAddress");
+
+  }else if(i==1)
+  {
+        this.props.navigation.navigate("Home");
+
+  }
+  else if(i==2)
+  {
+        this.props.navigation.navigate("Home");
+    
+  }
+
+}
+
+
  renderProfileList(item, index) {
     return (
       <TouchableOpacity
-        //onPress={() => this.props.navigation.navigate("ProductDetails")}
+        onPress={() => this.click(index)}
       >
       <View style={styles.viewMainlist}>
         <View style={styles.viewSublist}>

@@ -131,7 +131,7 @@ export default class MyOrder extends Component {
           </View>
         </ScrollView>
         <View style={styles.bottom}>
-          <Footer navigation={this.props.navigation} isSelect={1} />
+          <Footer navigation={this.props.navigation} isSelect={2} />
         </View>
       </View>
     );
