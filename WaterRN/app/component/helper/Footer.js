@@ -39,16 +39,16 @@ export default class Footer extends Component {
 				<Text style={[(isSelect===2) ? s.footerTextSelectView : s.footerTextView]}>Order</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
-				 <Image style={[(isSelect===3) ? s.footerIconSelected : s.footerIcon]} source={require('../images/order.png')}/>	
-				<Text style={[(isSelect===3) ? s.footerTextSelectView : s.footerTextView]}>HOME</Text>
+				 <Image style={[(isSelect===3) ? s.footerIconSelected : s.footerIcon]} source={require('../images/category.png')}/>	
+				<Text style={[(isSelect===3) ? s.footerTextSelectView : s.footerTextView]}>Category</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Home")}}>		
-				 <Image style={s.footerIcon} source={(isSelect===4) ? require('../images/user.png') : require('../images/user.png')} />		
-				<Text style={[(isSelect===4) ? s.footerTextSelectView : s.footerTextView]}>SCHEDULE</Text>
+				 <Image style={s.footerIcon} source={(isSelect===4) ? require('../images/cart.png') : require('../images/cart.png')} />		
+				<Text style={[(isSelect===4) ? s.footerTextSelectView : s.footerTextView]}>Cart</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={s.footerView} onPress={()=>{this._navigateTo("Account")}}>		
-				 <Image style={[(isSelect===5) ? s.footerIconSelected : s.footerIcon]} source={require('../images/user.png')}/>	
-				<Text style={[(isSelect===5) ? s.footerTextSelectView : s.footerTextView]}>ACCOUNT</Text>
+				 <Image style={[(isSelect===5) ? s.footerIconSelected : s.footerIcon]} source={require('../images/profile.png')}/>	
+				<Text style={[(isSelect===5) ? s.footerTextSelectView : s.footerTextView]}>Profile</Text>
 				</TouchableOpacity>
 			</View>	          
         </View>				

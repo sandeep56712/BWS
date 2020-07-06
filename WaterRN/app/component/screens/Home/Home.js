@@ -71,7 +71,7 @@ export default class Home extends Component {
           <View style={styles.viewContent}>
           <Text style={styles.txtShopName}>Sandeep Water Jar</Text>
           <View style={styles.viewRatings}>
-            <Text >5.0</Text>
+            <Text style={styles.txtRatings}>5.0</Text>
 
           </View>
 
@@ -87,7 +87,7 @@ export default class Home extends Component {
                 style={styles.imageDistance}
                 source={require("../../Image/distance.png")}
               />
-          <Text style={styles.imageRating}>5KM</Text>
+          <Text style={styles.txtDistance}>5KM</Text>
          
           </View>
         </View>
@@ -103,7 +103,7 @@ export default class Home extends Component {
       <View style={{ flex: 1 }}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          style={{ backgroundColor: "white" }}
+          style={{ backgroundColor: "#f5f5f6" }}
         >
           <View style={styles.viewMain}>
             <View style={styles.viewChange}>
@@ -154,26 +154,15 @@ export default class Home extends Component {
                 <Text style={styles.txtFilter}>Filter By</Text>
                 <View style={styles.viewFilterRating}> 
                 <Text style={styles.txtFilterRating}>Brand</Text>
-                <Image
-                  style={styles.imageFilter}
-                  source={require("../../Image/filter.png")}
-                />
                 </View>
                 <View style={styles.viewFilterRating}> 
-                <Text style={styles.txtFilterRating}>Brand</Text>
-                <Image
-                  style={styles.imageFilter}
-                  source={require("../../Image/filter.png")}
-                />
+                <Text style={styles.txtFilterRating}>Rating</Text>
+               
                 </View>
                 <View style={styles.viewFilterRating}> 
-                <Text style={styles.txtFilterRating}>Brand</Text>
-                <Image
-                  style={styles.imageFilter}
-                  source={require("../../Image/filter.png")}
-                />
-                </View>
+                <Text style={styles.txtFilterRating}>Category</Text>
                 
+                </View>                
           </View>
 
            <View style={{ marginTop: 5, marginBottom: 50 }}>

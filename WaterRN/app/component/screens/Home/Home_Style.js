@@ -76,12 +76,21 @@ imageRating:{
  // alignSelf:'center' ,
 
 },
+txtDistance:{
+	height:20,
+	width:30,
+	resizeMode:'contain',
+	marginLeft:1,
+	marginTop:45,
+	// alignSelf:'center' ,
+   
+   },
 imageDistance:{
-	height:30,
-	width:40,
+	height:35,
+	width:45,
 	resizeMode:'contain',
 	marginLeft:5,
-	marginTop:60,
+	marginTop:35,
 	// alignSelf:'center' ,
    
    },
@@ -157,7 +166,7 @@ txtShopDesc:{
 },
 viewWaterHeater:{
 	flexDirection:'row',
-	height:140,
+	height:125,
 	width:'90%',
 	alignSelf:'center',
 	// backgroundColor:'red',
@@ -222,7 +231,7 @@ flexDirection:'row',
 },
 
 subView:{
-	backgroundColor:'red',
+	backgroundColor:'#ffffff',
 	borderWidth:0.2,
 	borderRadius:8,
 	flexDirection:'row',
@@ -259,15 +268,18 @@ viewRating2:{
     marginLeft:-15,
 },
 viewRatings:{
-	height:25,
-	width:25,
-	backgroundColor:'red',
+	height:26,
+	width:26,
+	backgroundColor:'#ff7070',
 	alignItems:'center',
 	justifyContent:'center',
-	marginLeft:40,
-	borderRadius:2,
+	marginLeft:45,
+	borderRadius:4,
 	marginTop:5,
 
+},
+txtRatings:{
+	color:'white',
 },
 txtFilter:{
     marginTop:10,
@@ -283,22 +295,21 @@ imageFilter:{
 },
 viewFilterRating:{
 	marginTop:10,
-	marginLeft:20,
+	marginLeft:5,
 	flexDirection:'row',
 	height:20,
-	width:60,
-	backgroundColor:'pink',
+	width:80,
+	backgroundColor:'#ffffff',
 	borderRadius:5,
 	alignItems:'center',
 
 },
 
+txtFilterRating:{
+	alignItems:'center',
+	marginLeft:5,
 
+},
 
 }
-
-
-
-
-
 
