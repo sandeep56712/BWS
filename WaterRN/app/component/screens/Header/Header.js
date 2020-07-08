@@ -27,7 +27,8 @@ export default class Header extends Component {
   }
    openDrawer(){
      if(drawer != null && drawer.current != null){
-       drawer.current.open()
+    this.props.navigation.goBack();
+       // drawer.current.open()
      }
    }
 	render(){
@@ -56,7 +57,7 @@ export default class Header extends Component {
           <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
             <Image
               tintColor="black"
-              source={require("../../Image/menu.png")}
+              source={require("../../Image/arrow_back.png")}
               style={styles.menuIcon}
             />
           </TouchableOpacity>
@@ -68,7 +69,7 @@ export default class Header extends Component {
            <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
             <Image
               
-              source={require("../../Image/menu.png")}
+              source={require("../../Image/arrow_back.png")}
               style={styles.menuIcon}
             />
           </TouchableOpacity>
