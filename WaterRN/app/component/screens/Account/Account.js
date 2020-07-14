@@ -76,7 +76,7 @@ click(i)
 
   }else if(i==1)
   {
-        this.props.navigation.navigate("Home");
+        this.props.navigation.navigate("ShowAddressList");
 
   }
   else if(i==2)

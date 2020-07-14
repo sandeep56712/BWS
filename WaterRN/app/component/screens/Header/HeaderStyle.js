@@ -21,7 +21,8 @@ export default {
   backgroundColor:'white',
   height:Platform.OS==='ios'? 60:56,
   padding:8,
-  justifyContent:"flex-start"
+  justifyContent:"flex-start",
+  backgroundColor:'#ff7070',
   },
   titleView: {
     alignItems: "center", 
@@ -77,6 +78,6 @@ notification_icon:{
     color: "black",
     fontSize: 18,   
     alignSelf: "center",
-    marginLeft:"35%",
+    marginLeft:"10%",
   },
 };

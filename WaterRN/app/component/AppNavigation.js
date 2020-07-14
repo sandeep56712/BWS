@@ -21,6 +21,7 @@ import ProductDetails from './screens/ProductDetails/ProductDetails'
 import Cart from './screens/Cart/Cart'
 import MyOrder from './screens/MyOrder/MyOrder'
 import AddAddress from './screens/AddAddress/AddAddress'
+import ShowAddressList from './screens/ShowAddressList/ShowAddressList'
 import LeftMenu from "./LeftMenu";
 
 
@@ -61,6 +62,9 @@ const AppStackAllScreen = createStackNavigator(
     },
     AddAddress: {
       screen: AddAddress
+    },
+    ShowAddressList: {
+      screen: ShowAddressList
     },
     
 },
