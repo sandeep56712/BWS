@@ -49,11 +49,12 @@ export default {
   height:50,
   alignItems:'center',
   justifyContent:'center',
+  tintColor:'white',
   },
 menuIcon:{
     width:15, 
     height:15,
-    tintColor:"black"
+    tintColor:"white"
 },
 notificationView:{
     alignSelf:'flex-end',
@@ -75,7 +76,7 @@ notification_icon:{
     alignSelf: "center"
   },
    textHeader: {
-    color: "black",
+    color: "white",
     fontSize: 18,   
     alignSelf: "center",
     marginLeft:"10%",

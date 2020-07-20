@@ -47,7 +47,7 @@ export default class Header extends Component {
           leftIcon=
            <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
             <Image
-              tintColor="black"
+              tintColor="white"
               source={require("../../Image/arrow_back.png")}
               style={styles.menuIcon}
             />
@@ -56,7 +56,7 @@ export default class Header extends Component {
           leftIcon= 
           <TouchableOpacity style={styles.menuIconTouch} onPress={() => this.openDrawer()}>
             <Image
-              tintColor="black"
+              tintColor="white"
               source={require("../../Image/arrow_back.png")}
               style={styles.menuIcon}
             />

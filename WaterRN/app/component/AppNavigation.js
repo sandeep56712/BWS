@@ -22,6 +22,8 @@ import Cart from './screens/Cart/Cart'
 import MyOrder from './screens/MyOrder/MyOrder'
 import AddAddress from './screens/AddAddress/AddAddress'
 import ShowAddressList from './screens/ShowAddressList/ShowAddressList'
+import EditProfile from './screens/EditProfile/EditProfile'
+import ChangePassword from './screens/ChangePassword/ChangePassword'
 import LeftMenu from "./LeftMenu";
 
 
@@ -66,12 +68,18 @@ const AppStackAllScreen = createStackNavigator(
     ShowAddressList: {
       screen: ShowAddressList
     },
+     EditProfile: {
+      screen: EditProfile
+    }, 
+    ChangePassword: {
+      screen: ChangePassword
+    },
     
 },
   {
     headerMode: "none",
     mode: "modal",
-    initialRouteName: "Splash", //Splash
+    initialRouteName: "ChangePassword", //Splash
    
   }
 );
